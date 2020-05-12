@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<vehicle type="manureTrailer_smartAttach">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Shuttle 8.000</name>
+        <specs>
+            <combination>PHOENIX, TGS</combination>
+            <fillTypes>liquidFertilizer herbicide</fillTypes>
+        </specs>
+        <functions>
+            <function>$l10n_function_tank</function>
+        </functions>
+        <image>horsch/shuttle8000/store_horschShuttle8000Bundle.png</image>
+        <price>15000</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>HORSCH</brand>
+        <category>augerWagons</category>
+        <shopTranslationOffset>0 -0.2 0</shopTranslationOffset>
+        <shopRotationOffset>6 0 0</shopRotationOffset>
+        <vertexBufferMemoryUsage>0</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>0</indexBufferMemoryUsage>
+        <textureMemoryUsage>0</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_sprayerTank</typeDesc>
+        <filename>horsch/shuttle8000/shuttle8000.i3d</filename>
+        <size width="3" length="5"/>
+        <speedLimit value="80"/>
+        <components>
+            <component centerOfMass="0 0 0" solverIterationCount="30" mass="1500"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 -1">
+            <default name="DEFAULT_IMPLEMENT"/>
+            <selected name="DEFAULT_IMPLEMENT_SELECTED"/>
+        </schemaOverlay>
+    </base>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJointSemiTrailer" jointType="semitrailer" lowerRotLimitScale="0 0 0" upperRotLimitScale="0 0 0" upperRotationOffset="0" lowerTransLimitScale="0 0 0" upperTransLimitScale="0 0 0">
+                <additionalObjects>
+                    <additionalObject node="attacherMAN" attacherVehiclePath="data/vehicles/man/tgs18500/tgs18500.xml"/>
+                    <additionalObject node="attacherTatra" attacherVehiclePath="data/vehicles/tatra/tatraPhoenix/tatraPhoenix.xml"/>
+                    <additionalObject node="attacherLizardTruckS" attacherVehiclePath="data/vehicles/lizard/truckS/truckS.xml"/>
+                    <additionalObject node="attacherLizardTruckM" attacherVehiclePath="data/vehicles/lizard/truckM/truckM.xml"/>
+                    <additionalObject node="attacherLizardTruckL" attacherVehiclePath="data/vehicles/lizard/truckL/truckL.xml"/>
+                </additionalObjects>
+            </inputAttacherJoint>
+        </inputAttacherJoints>
+        <support animationName="moveSupport"/>
+    </attachable>
+
+    <lights>
+        <realLights>
+            <high>
+                <light node="workLightBackHigh1" lightTypes="1"/>
+            </high>
+        </realLights>
+
+        <defaultLights>
+            <defaultLight shaderNode="lightsGlas_static" lightTypes="1" />
+        </defaultLights>
+    </lights>
+
+    <animations>
+      <animation name="moveSupport">
+        <part node="attachers" startTime="0.98" endTime="0.99" visibility="true"/>
+        <part node="attachers" startTime="0.99" endTime="1.0" visibility="false"/>
+      </animation>
+    </animations>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <unloading width="12" offset="0 0 0" />
+                    <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="SPRAYER" capacity="8000">
+                        <exactFillRootNode node="exactFillRootNode" />
+                    </fillUnit>
+                    <fillTrigger consumePtoPower="true"/>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+
+        <sounds>
+            <fill template="SLURRY_01" />
+        </sounds>
+    </fillUnit>
+
+    <fillTriggerVehicle triggerNode="fillTrigger" fillUnitIndex="1" litersPerSecond="200"/>
+
+    <dischargeable>
+        <dischargeNode node="dischargeNode" emptySpeed="1000" fillUnitIndex="1">
+            <info width="1.0" length="0.5" zOffset="0.4" />
+            <trigger node="unloadTrigger" />
+            <dischargeSound template="SLURRY_01"/>
+        </dischargeNode>
+    </dischargeable>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="1" fieldMultiplier="2"/>
+
+    <foliageBending>
+        <bendingNode minX="-1.2" maxX="1.2" minZ="-2.3" maxZ="2.2" yOffset="0.5" />
+    </foliageBending>
+
+    <tipOccluder>
+        <occlusionArea start="tipOcclusionAreaStart" width="tipOcclusionAreaWidth" height="tipOcclusionAreaHeight"/>
+    </tipOccluder>
+
+    <smartAttach trigger="smartAttachTrigger" jointType="semitrailer"/>
+
+    <i3dMappings>
+        <i3dMapping id="horschShuttle8000_main_component1" node="0>" />
+        <i3dMapping id="attacherJointSemiTrailer" node="0>0|0" />
+        <i3dMapping id="unloadTrigger" node="0>0|1|0" />
+        <i3dMapping id="fillTrigger" node="0>0|1|1" />
+        <i3dMapping id="exactFillRootNode" node="0>0|1|2" />
+        <i3dMapping id="dischargeNode" node="0>0|1|3" />
+        <i3dMapping id="workLightBackHigh1" node="0>0|2|0|0" />
+        <i3dMapping id="lightsGlas_static" node="0>0|2|1" />
+        <i3dMapping id="attachers" node="0>0|3" />
+        <i3dMapping id="attacherMAN" node="0>0|3|0" />
+        <i3dMapping id="attacherTatra" node="0>0|3|1" />
+        <i3dMapping id="attacherLizardTruckS" node="0>0|3|2" />
+        <i3dMapping id="attacherLizardTruckM" node="0>0|3|3" />
+        <i3dMapping id="attacherLizardTruckL" node="0>0|3|4" />
+        <i3dMapping id="smartAttachTrigger" node="0>0|4" />
+        <i3dMapping id="tipOcclusionAreaStart" node="0>0|5|0" />
+        <i3dMapping id="tipOcclusionAreaWidth" node="0>0|5|1" />
+        <i3dMapping id="tipOcclusionAreaHeight" node="0>0|5|2" />
+        <i3dMapping id="dummyNodeForTipAnimation" node="0>0|7" />
+    </i3dMappings>
+</vehicle>

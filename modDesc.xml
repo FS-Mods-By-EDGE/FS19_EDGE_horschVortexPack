@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="44">
+    <author>GIANTS Software</author>
+    <version>1.0.1.0</version>
+    <title>
+        <en>Horsch Pack</en>
+    </title>
+
+    <description>
+        <en>
+            <![CDATA[Horsch Pack
+Changelog 1.0.1.0:
+- fixed skinning from dragHose36
+- added new vehicles (Fliegl DHKA390 and TrailerLifter)
+- wheels from Titan34UW gets visibile after a few meters
+- maestro SW 24.75 is sliding in detached state automatically
+- Serto 12SC is sliding in detached state automatically
+- Leeb PT350 decreased turning radius and increased turning speed
+]]>
+        </en>
+        <de>
+            <![CDATA[Horsch Pack
+Changelog 1.0.1.0:
+- skinning problem von Schleppschlauch36 behoben
+- neue Fahrzeuge hinzugefügt (Fliegl DHAK390 und TrailerLifter)
+- Reifen von Titan34UW werden nach einigen Metern unsichtbar
+- Maestro SW 24.75 bewegt sich in abgehangenem zustand von alleine
+- Serto 12SC bewegt sich in abgehangenem zustand von alleine
+- Leeb PT350 Wendekreis verringert und Lenkgeschwindigkeit erhöht
+]]>
+        </de>
+        <fr>
+            <![CDATA[Horsch Pack
+Changelog 1.0.1.0:
+- problème d'écorchage du tuyau d'arrosage36 fixe
+- nouveaux véhicules ajoutés (Fliegl DHAK390 et TrailerLifter)
+- les pneus du Titan34UW deviennent invisibles après quelques mètres.
+- Maestro SW 24.75 se déplace seul à l'état suspendu
+- Le Serto 12SC se déplace seul à l'état suspendu
+- réduction du cercle de rotation du Leeb PT350 et augmentation de la vitesse de braquage
+]]>
+        </fr>
+    </description>
+
+    <iconFilename>icon_horschPack.png</iconFilename>
+    <multiplayer supported="true" />
+
+    <storeItems>
+        <storeItem xmlFilename="horsch/slurryTank21000/slurryTank21000.xml"/>
+        <storeItem xmlFilename="horsch/dragHose36/dragHose36.xml"/>
+        <storeItem xmlFilename="horsch/injector/injector.xml"/>
+        <storeItem xmlFilename="horsch/slurryTender21000/slurryTender21000.xml"/>
+        <storeItem xmlFilename="horsch/seedShuttle/seedShuttle.xml"/>
+        <storeItem xmlFilename="horsch/seedTender/seedTenderBundle.xml"/>
+        <storeItem xmlFilename="horsch/shuttle8000/shuttle8000Bundle.xml"/>
+        <storeItem xmlFilename="horsch/titan34UW/titan34UW.xml"/>
+        <storeItem xmlFilename="horsch/evo12_375/evo12_375.xml"/>
+        <storeItem xmlFilename="horsch/serto12SC/serto12SC.xml"/>
+        <storeItem xmlFilename="horsch/maestroSW1675/maestroSW1675.xml"/>
+        <storeItem xmlFilename="horsch/maestroSW2475/maestroSW2475.xml"/>
+        <storeItem xmlFilename="horsch/leebPT350/leebPT350.xml"/>
+        <storeItem xmlFilename="horsch/rauch10000/rauch10000.xml"/>
+        <storeItem xmlFilename="fliegl/dHKA390/dHKA390.xml"/>
+        <storeItem xmlFilename="horsch/trackLifter/trackLifter.xml"/>
+    </storeItems>
+
+    <vehicleTypes>
+        <type name="augerWagon_smartAttach" parent="augerWagon" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="smartAttach" />
+        </type>
+        <type name="manureTrailer_smartAttach" parent="manureTrailer" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="smartAttach" />
+        </type>
+    </vehicleTypes>
+
+    <jointTypes>
+        <jointType name="semiTrailerTrackLifter"/>
+    </jointTypes>
+
+    <l10n>
+        <text name="horschSpreader">
+            <en>Fertilizer Spreader 10.000</en>
+            <de>Düngerstreuer 10.000</de>
+            <it>Spandifertilizzante 10.000</it>
+            <fr>Épandeur à engrais 10 000</fr>
+            <es>Abonadora 10 000</es>
+            <br>Pulverizador de Fertilizante 10.000</br>
+            <cs>肥料播撒机 10.000</cs>
+            <ct>肥料撒佈機 10.000</ct>
+            <cz>Rozmetadlo hnojiv (10 000 l)</cz>
+            <ea>Rozmetadlo hnojiv (10 000 l)</ea>
+            <hu>Műtrágyaszóró 10.000</hu>
+            <jp>肥料散布機10.000</jp>
+            <kr>Fertilizer Spreader 10.000</kr>
+            <nl>Kunstmeststrooier 10.000</nl>
+            <pl>Rozrzutnik nawozu 10 000</pl>
+            <pt>Espalhador de Fertilizante 10.000</pt>
+            <ro>Mașină de împrăștiat îngrășăminte 10.000</ro>
+            <ru>Разбрасыватель удобрений 10 000</ru>
+            <tr>Suni Gübre Spreyi 10.000</tr>
+        </text>
+        <text name="horschDraghose">
+            <en>Drag Hose 36</en>
+            <de>Schleppschlauch 36</de>
+            <it>Tubo di trascinamento 36</it>
+            <fr>Rampe à pendillards 36</fr>
+            <es>Manguera de arrastre 36</es>
+            <br>Mangueira de Arrasto 36</br>
+            <cs>拖拽软管 36</cs>
+            <ct>拖曳軟管 36</ct>
+            <cz>Tažná hadice 36</cz>
+            <ea>Manguera de arrastre 36</ea>
+            <hu>Tömlőkocsi 36</hu>
+            <jp>ドラッグホース36</jp>
+            <kr>Drag Hose 36</kr>
+            <pl>Wąż wleczony 36</pl>
+            <nl>Sleepslang 36</nl>
+            <pt>Mangueira de Arrasto 36</pt>
+            <ro>Furtun tractat 36</ro>
+            <ru>Буксируемый шланг 36</ru>
+            <tr>Çekme Hortumu 36</tr>
+        </text>
+        <text name="horschTransportTrailer">
+            <en>Transport-Trailer</en>
+            <de>Transportanhänger</de>
+            <it>Rimorchio da trasporto</it>
+            <fr>Remorque de transport</fr>
+            <es>Transporte-remolque</es>
+            <br>Reboque de Transporte</br>
+            <cs>运输拖车</cs>
+            <ct>運輸拖車</ct>
+            <cz>Tahač</cz>
+            <ea>Transporte: remolque</ea>
+            <hu>Szállító pótkocsi</hu>
+            <jp>運搬トレーラー</jp>
+            <kr>Transport-Trailer</kr>
+            <pl>Przyczepa transportowa</pl>
+            <nl>Transporttrailer</nl>
+            <pt>Reboque-transportador</pt>
+            <ro>Remorcă de transport</ro>
+            <ru>Транспортный прицеп</ru>
+            <tr>Nakil Römorku</tr>
+        </text>
+        <text name="horschSlurryTender21000">
+            <en>Slurry Tender 21.000</en>
+            <de>Güllezubringer 21.000</de>
+            <it>Serbatoio liquami 21.000</it>
+            <fr>Tonne à lisier 21 000</fr>
+            <es>Contenedor de purín 21 000</es>
+            <br>Enterrador de Adubo 21.000</br>
+            <cs>水肥车 21.000</cs>
+            <ct>水肥車 21.000</ct>
+            <cz>Cisterna na močůvku (21 000 l)</cz>
+            <ea>Contenedor de purín 21,000</ea>
+            <hu>Hígtrágyaszóró-tartály 21,000</hu>
+            <jp>スラリーテンダー21.000</jp>
+            <kr>Slurry Tender 21.000</kr>
+            <pl>Cysterna na gnojówkę 21 000</pl>
+            <nl>Drijfmestwagen 21.000</nl>
+            <pt>Vagão de Fertilizante 21.000</pt>
+            <ro>Rezervor pentru îngrășăminte lichide 21.000</ro>
+            <ru>Транспортер навозной жижи 21 000</ru>
+            <tr>Bulamaç Tankeri 21.000</tr>
+        </text>
+        <text name="horschSlurryTank21000">
+            <en>Slurry Tank 21.000 Tracks</en>
+            <de>Güllefass 21.000 Tracks</de>
+            <it>Vasca dei liquami 21.000 segni</it>
+            <fr>Cuve à lisier 21 000 Tracks</fr>
+            <es>Cuba de purín 21 000 pistas</es>
+            <br>Tanque de Fertilizante 21.000 Carris</br>
+            <cs>水肥槽 21.000 车辙</cs>
+            <ct>水肥槽 21.000 車轍</ct>
+            <cz>Cisterna na močůvku (21.000l)</cz>
+            <ea>Tanque de purín: 21,000 pistas</ea>
+            <hu>Hígtrágyatartály 21.000 vontatható</hu>
+            <jp>スラリータンク21.000トラック</jp>
+            <kr>Slurry Tank 21.000 Tracks</kr>
+            <pl>Zbiornik gnojówki 21 000 gąsienice</pl>
+            <nl>Drijfmesttank 21.000 tracks</nl>
+            <pt>Tanque de Fertilizante 21.000</pt>
+            <ro>Șenile pentru Rezervor pentru îngrășăminte lichide 21.000</ro>
+            <ru>Бак для навозной жижи на 21 000 прогонов</ru>
+            <tr>Bulamaç Tankı 21.000 Paletleri</tr>
+        </text>
+        <text name="horschInjector">
+            <en>Injector 12</en>
+            <de>Schlitzgerät 12</de>
+            <it>Iniettore 12</it>
+            <fr>Injecteur 12</fr>
+            <es>Inyector 12</es>
+            <br>Injetor 12</br>
+            <cs>喷射器 12</cs>
+            <ct>噴射器 12</ct>
+            <cz>Aplikátor kejdy 12</cz>
+            <ea>Inyector 12</ea>
+            <hu>Injektor 12</hu>
+            <jp>インジェクター12</jp>
+            <kr>Injector 12</kr>
+            <pl>Wtryskiwacz 12</pl>
+            <nl>Injector 12</nl>
+            <pt>Injetor 12</pt>
+            <ro>Injector 12</ro>
+            <ru>Опрыскиватель 12</ru>
+            <tr>Enjektör 12</tr>
+        </text>
+        <text name="horschSlurryTankCombinations">
+            <en>Drag Hose 36, Injector 12</en>
+            <de>Schleppschlauch,Schlitzgerät</de>
+            <it>Tubo di trascinamento 36, iniettore 12</it>
+            <fr>Rampe à pendillards 36, Injecteur 12</fr>
+            <es>Manguera de arrastre 36, inyector 12</es>
+            <br>Mangueira de Arrasto 36, Injetor 12</br>
+            <cs>拖拽软管 36、喷射器 12</cs>
+            <ct>拖曳軟管 36、噴射器 12</ct>
+            <cz>Tažná hadice 36, aplikátor kejdy 12</cz>
+            <ea>Manguera de arrastre 36, inyector 12</ea>
+            <hu>Tömlőkocsi 36, injektor 12</hu>
+            <jp>ドラッグホース36、インジェクター12</jp>
+            <kr>Drag Hose 36, Injector 12</kr>
+            <pl>Wąż wleczony 36, wtryskiwacz 12</pl>
+            <nl>Sleepslang 36, injector 12</nl>
+            <pt>Mangueira de Arrasto 36, Injetor 12</pt>
+            <ro>Furtun tractat 36, Injector 12</ro>
+            <ru>Буксируемый шланг 36, опрыскиватель 12</ru>
+            <tr>Çekme Hortumu 36, Enjektör 12</tr>
+        </text>
+        <text name="input_TOGGLE_SEEDTENDER_DOORS">
+            <en>Toggle doors</en>
+            <de>Schieber wechseln</de>
+            <it>Alterna porte</it>
+            <fr>Ouvrir/fermer les portes</fr>
+            <es>Alternar puertas</es>
+            <br>Ativar/desativar portas</br>
+            <cs>切换门</cs>
+            <ct>切換門</ct>
+            <cz>Přepnutí dveří</cz>
+            <ea>Alternar puertas</ea>
+            <hu>Ajtók váltása</hu>
+            <jp>ドア切替</jp>
+            <kr>투입구 전환</kr>
+            <pl>Przełącz drzwiczki</pl>
+            <nl>Deuren wisselen</nl>
+            <pt>Ativar portas</pt>
+            <ro>Comutare uși</ro>
+            <ru>Переключение дверей</ru>
+            <tr>Kapıları değiştir</tr>
+        </text>
+        <text name="action_doorLeft">
+            <en>Toggle door (current: seeds)</en>
+            <de>Schieber wechseln (Aktuell: Saatgut)</de>
+            <it>Alterna porta (attuale: semi)</it>
+            <fr>Ouvrir/fermer la porte (actuel : graines)</fr>
+            <es>Alternar puerta (actualmente: semillas)</es>
+            <br>Ativar/desativar porta (atual: sementes)</br>
+            <cs>切换门 (当前：种子)</cs>
+            <ct>切換門 (目前：種子)</ct>
+            <cz>Přepnutí dveří (aktuálně: semena)</cz>
+            <ea>Alternar puerta (actual: semillas)</ea>
+            <hu>Ajtó váltása (jelenlegi: vetőmag)</hu>
+            <jp>ドア切替（現在：種）</jp>
+            <kr>투입구 전환(현재: 씨앗)</kr>
+            <pl>Przełącz drzwiczki (teraz: nasiona)</pl>
+            <nl>Deur wisselen (huidige: zaden)</nl>
+            <pt>Ativar porta (atual: sementes)</pt>
+            <ro>Comutare ușă (curentă: semințe)</ro>
+            <ru>Переключить дверь (сейчас семена)</ru>
+            <tr>Kapıyı değiştir (şu anki: tohumlar)</tr>
+        </text>
+        <text name="action_doorRight">
+            <en>Toggle door (current: fertilizer)</en>
+            <de>Schieber wechseln (Aktuell: Dünger)</de>
+            <it>Alterna porta (attuale: fertilizzante)</it>
+            <fr>Ouvrir/fermer la porte (actuel : engrais)</fr>
+            <es>Alternar puerta (actualmente: fertilizante)</es>
+            <br>Ativar/desativar porta (atual: fertilizante)</br>
+            <cs>切换门 (当前：肥料)</cs>
+            <ct>切換門 (目前：肥料)</ct>
+            <cz>Přepnutí dveří (aktuálně: hnojivo)</cz>
+            <ea>Alternar puerta (actual: fertilizante)</ea>
+            <hu>Ajtó váltása (jelenlegi: műtrágya)</hu>
+            <jp>ドア切替（現在：肥料）</jp>
+            <kr>투입구 전환(현재: 비료)</kr>
+            <pl>Przełącz drzwiczki (teraz: nawóz)</pl>
+            <nl>Deur wisselen (huidige: kunstmest)</nl>
+            <pt>Ativar porta (atual: fertilizante)</pt>
+            <ro>Comutare ușă (curentă: îngrășământ)</ro>
+            <ru>Переключить дверь (сейчас удобрения)</ru>
+            <tr>Kapıyı değiştir (şu anki: suni gübre)</tr>
+        </text>
+        <text name="action_doSmartAttachGround">
+            <en>Attach %s</en>
+            <de>%s aufsatteln</de>
+            <it>Collega %s</it>
+            <fr>Atteler %s</fr>
+            <es>Acoplar %s</es>
+            <br>Acoplar %s</br>
+            <cs>装设 %s</cs>
+            <ct>裝設 %s</ct>
+            <cz>Připojit modul %s</cz>
+            <ea>Acoplar %s</ea>
+            <hu>%s felcsatolása</hu>
+            <jp>%sを接続する</jp>
+            <kr>%s 장착</kr>
+            <pl>Przyłącz %s</pl>
+            <nl>%s bevestigen</nl>
+            <pt>Anexar %s</pt>
+            <ro>Cuplează %s</ro>
+            <ru>Прицепить %s</ru>
+            <tr>%s Tak</tr>
+        </text>
+        <text name="action_doSmartAttachTransform">
+            <en>Transform %s</en>
+            <de>%s umbauen</de>
+            <it>Trasforma %s</it>
+            <fr>Transformer %s</fr>
+            <es>Transformar %s</es>
+            <br>Transformar %s</br>
+            <cs>转换 %s</cs>
+            <ct>轉換 %s</ct>
+            <cz>Transformovat modul %s</cz>
+            <ea>Transformar %s</ea>
+            <hu>%s átalakítása</hu>
+            <jp>%sを変換する</jp>
+            <kr>%s 변경</kr>
+            <pl>Zmień %s</pl>
+            <nl>%s transformeren</nl>
+            <pt>Transformar %s</pt>
+            <ro>Transformă %s</ro>
+            <ru>Изменить %s</ru>
+            <tr>%s Dönüştür</tr>
+        </text>
+        <text name="function_seedTender">
+            <en>Auger wagons temporarily store and transport seeds or fertilizer.</en>
+            <de>Überladewagen dienen als Zwischenspeicher für Saatgut oder Mineraldünger.</de>
+            <it>I raccogligrano immagazzinano temporaneamente e trasportano semi o fertilizzante.</it>
+            <fr>Les remorques à grain stockent et transportent temporairement des graines ou de l'engrais.</fr>
+            <es>Los remolques de transportador transportan o almacenan temporalmente semillas y fertilizante.</es>
+            <br>Carretas armazenam e transportam sementes ou fertilizantes temporariamente.</br>
+            <cs>螺旋运谷车可临时存放和运输种子或肥料。</cs>
+            <ct>螺旋運穀車可臨時存放和運輸種子或肥料。</ct>
+            <cz>Překládací vozy slouží k dočasnému skladování a přepravě semen nebo hnojiv.</cz>
+            <ea>Los remolques de transporte almacenan o transportan semillas y fertilizante de manera temporal.</ea>
+            <hu>Az átrakókocsik átmenetileg magot vagy műtrágyát tárolnak és szállítanak.</hu>
+            <jp>オーガーワゴンでは、種や肥料を一時的に保管して運ぶことができます。</jp>
+            <kr>오거 왜건은 씨앗이나 비료를 임시로 저장하거나 운반합니다.</kr>
+            <pl>Wozy przeładunkowe służą do tymczasowego przechowywania i transportu nasion lub nawozu.</pl>
+            <nl>Overlaadwagens worden gebruikt om tijdelijk zaden of kunstmest in op te slaan of te vervoeren.</nl>
+            <pt>Os vagões armazenam temporariamente e transportam sementes ou fertilizante.</pt>
+            <ro>Remorcile cu șnec depozitează temporar și transportă semințe sau îngrășăminte.</ro>
+            <ru>Прицепы с винтовым конвейером позволяют временно хранить и перевозить семена и удобрения.</ru>
+            <tr>Burgu vagonları, tohum veya suni gübreyi geçici olarak depolar ve nakleder.</tr>
+        </text>
+        <text name="typeDesc_injector">
+            <en>Injector</en>
+            <de>Schlitzgerät</de>
+            <it>Iniettore</it>
+            <fr>Injecteur</fr>
+            <es>Inyector</es>
+            <br>Injetor</br>
+            <cs>喷射器</cs>
+            <ct>噴射器</ct>
+            <cz>Aplikátor kejdy</cz>
+            <ea>Inyector</ea>
+            <hu>Injektor</hu>
+            <jp>インジェクター</jp>
+            <kr>인젝터</kr>
+            <pl>Wtryskiwacz</pl>
+            <nl>Injector</nl>
+            <pt>Injetor</pt>
+            <ro>Injector</ro>
+            <ru>Опрыскиватель</ru>
+            <tr>Enjektör</tr>
+        </text>
+        <text name="typeDesc_draghose">
+            <en>Draghose</en>
+            <de>Schleppschlauch</de>
+            <it>Tubo di trascinamento</it>
+            <fr>Rampe à pendillards</fr>
+            <es>Manguera de arrastre</es>
+            <br>Mangueira de Arrasto</br>
+            <cs>拖拽软管</cs>
+            <ct>拖曳軟管</ct>
+            <cz>Tažná hadice</cz>
+            <ea>Manguera de arrastre</ea>
+            <hu>Tömlőkocsi</hu>
+            <jp>ドラッグホース</jp>
+            <kr>드래그호스</kr>
+            <pl>Wąż wleczony</pl>
+            <nl>Sleepslang</nl>
+            <pt>Mangueira de arrasto</pt>
+            <ro>Furtun tractat</ro>
+            <ru>Буксируемый шланг</ru>
+            <tr>Çekme Hortumu</tr>
+        </text>
+        <text name="tipSide_moveDoor">
+            <en>Back vertical</en>
+            <de>Hinten vertikal</de>
+            <it>indietro verticalmente</it>
+            <fr>en arrière verticalement</fr>
+            <es>atrás en vertical</es>
+            <br>vertical traseiro</br>
+            <cs>背面垂直</cs>
+            <ct>背面垂直</ct>
+            <cz>dozadu svisle</cz>
+            <ea>atrás en vertical</ea>
+            <hu>függőleges nyitás</hu>
+            <jp>垂直バック</jp>
+            <kr>후면 수직</kr>
+            <pl>z tyłu pionowo</pl>
+            <nl>achterkant verticaal</nl>
+            <pt>Para trás, na vertical</pt>
+            <ro>înapoi vertical</ro>
+            <ru>Назад вертикально</ru>
+            <tr>geri dikey</tr>
+        </text>
+    </l10n>
+</modDesc>

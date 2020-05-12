@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<vehicle type="implement">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>$l10n_horschTransportTrailer</name>
+        <specs>
+            <combination>Seed Tender 10T, Shuttle 8.000</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_dolly</function>
+        </functions>
+        <image>horsch/transportTrailer/store_horschTransportTrailer.png</image>
+        <price>1200</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>HORSCH</brand>
+        <category>dollys</category>
+        <vertexBufferMemoryUsage>0</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>0</indexBufferMemoryUsage>
+        <textureMemoryUsage>0</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_trailer</typeDesc>
+        <filename>horsch/transportTrailer/transportTrailer.i3d</filename>
+        <size width="3.5" length="6.5"/>
+        <components>
+            <component centerOfMass="0 0.4 -2.6" solverIterationCount="30" mass="1000"/>
+            <component centerOfMass="0 0 0" solverIterationCount="30" mass="600"/>
+            <component centerOfMass="0 -0.2 0" solverIterationCount="10" mass="300"/>
+            <joint component1="1" component2="2" node="frontPartJoint" rotLimit="0 0 0" transLimit="0 0 0"/>
+            <joint component1="2" component2="3" node="drawbarJoint" rotLimit="0 0 0" transLimit="0 0 0"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0">
+            <default name="DEFAULT_IMPLEMENT"/>
+            <selected name="DEFAULT_IMPLEMENT_SELECTED"/>
+        </schemaOverlay>
+    </base>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration>
+                <wheels>
+                    <wheel filename="$data/shared/wheels/horsch/NHS/NHS_185_65_R15.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="0.7" repr="wheelLeft" forcePointRatio="0.3" initialCompression="10" suspTravel="0.15" spring="38" damper="10"/>
+                        <tire isCareWheel="true" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/horsch/NHS/NHS_185_65_R15.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="0.7" repr="wheelRight" forcePointRatio="0.3" initialCompression="10" suspTravel="0.15" spring="38" damper="10"/>
+                        <tire isCareWheel="true" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/horsch/NHS/NHS_185_65_R15.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="0.7" repr="wheelFront" forcePointRatio="0.3" initialCompression="10" suspTravel="0.15" spring="38" damper="10"/>
+                        <tire isCareWheel="true" />
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+        <hubs>
+            <color0>HORSCH_RED1</color0>
+            <hub linkNode="wheelLeft" filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="true"  scale="0.2 0.2 0.2" />
+            <hub linkNode="wheelRight" filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="false"  scale="0.2 0.2 0.2" />
+            <hub linkNode="wheelFront" filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="false"  scale="0.2 0.2 0.2" />
+        </hubs>
+
+    </wheels>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" rootNode="horschTransportTrailer_drawbar_component3" jointType="trailer" attacherHeight="0.738"/>
+            <inputAttacherJoint node="attacherJoint" rootNode="horschTransportTrailer_drawbar_component3" jointType="trailerLow" attacherHeight="0.738"/>
+        </inputAttacherJoints>
+        <support animationName="moveSupport"/>
+        <brakeForce>0.15</brakeForce>
+    </attachable>
+
+    <attacherJoints>
+        <attacherJoint node="attacherJointSemiTrailer" jointType="semitrailer" lowerRotLimit="0 0 0" upperRotLimit="0 0 0" lowerTransLimit="0 0 0" allowsJointLimitMovement="false" allowsLowering="false">
+            <schema position="0.5 0" rotation="0" invertX="false"/>
+        </attacherJoint>
+        <sounds>
+            <attach template="ATTACH_01" linkNode="horschTransportTrailer_main_component1" />
+            <hydraulic template="DEFAULT_HYDRAULIC_SOUND" linkNode="horschTransportTrailer_main_component1" />
+        </sounds>
+    </attacherJoints>
+
+    <animations>
+        <animation name="moveSupport">
+            <part startTime="0.0" endTime="0.05" componentJointIndex="1" startRotLimit="0 95 0" endRotLimit="0 0 0"/>
+            <part startTime="0.0" endTime="0.05" componentJointIndex="2" startRotLimit="40 0 0" endRotLimit="10 0 0"/>
+        </animation>
+    </animations>
+
+    <foliageBending>
+        <bendingNode minX="-1.4" maxX="1.4" minZ="-2.9" maxZ="-1.7" yOffset="0.2" />
+        <bendingNode minX="-0.5" maxX="0.5" minZ="-1.7" maxZ="2" yOffset="0.2" />
+    </foliageBending>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4"/>
+
+    <i3dMappings>
+        <i3dMapping id="horschTransportTrailer_main_component1" node="0>" />
+        <i3dMapping id="wheelLeft" node="0>0|0|0" />
+        <i3dMapping id="wheelRight" node="0>0|0|1" />
+        <i3dMapping id="frontPartJoint" node="0>0|1" />
+        <i3dMapping id="attacherJointSemiTrailer" node="0>0|2" />
+        <i3dMapping id="horschTransportTrailer_axis_component2" node="1>" />
+        <i3dMapping id="wheelFront" node="1>0|0" />
+        <i3dMapping id="drawbarJoint" node="1>0|1" />
+        <i3dMapping id="horschTransportTrailer_drawbar_component3" node="2>" />
+        <i3dMapping id="attacherJoint" node="2>0|0" />
+    </i3dMappings>
+</vehicle>

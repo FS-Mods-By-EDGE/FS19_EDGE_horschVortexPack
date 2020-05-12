@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="dragHose36" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="1" filename="dragHose36_normal.png" />
+    <File fileId="2" filename="dragHose36_specular.png" />
+    <File fileId="4" filename="dragHose36Decals_diffuse.png" />
+    <File fileId="5" filename="$data/shared/default_normal.png" />
+    <File fileId="6" filename="dragHose36Decals_specular.png" />
+    <File fileId="3" filename="$data/shaders/vehicleShader.xml" />
+  </Files>
+
+  <Materials>
+    <Material name="lambert1" materialId="1" diffuseColor="0.5 0.5 0.5 1" specularColor="0 0 0" ambientColor="1 1 1">
+    </Material>
+    <Material name="horschDragHose36_mat" materialId="2" diffuseColor="0.5 0.5 0.5 1" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1" customShaderId="3" customShaderVariation="colorMask">
+      <CustomParameter name="colorMat2" value="0.014 0.014 0.014 1"/>
+      <CustomParameter name="colorMat3" value="0.129 0.373 0.129 1"/>
+      <CustomParameter name="colorMat0" value="0.5732 0.0078 0.0210 0"/>
+      <CustomParameter name="colorMat1" value="0.00 0.00 0.50 1"/>
+      <CustomParameter name="colorMat4" value="0.44 0.44 0.44 1"/>
+      <Normalmap fileId="1"/>
+      <Glossmap fileId="2"/>
+    </Material>
+    <Material name="horschDragHose36Decals_mat" materialId="3" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1" alphaBlending="true" customShaderId="3" customShaderVariation="Decal">
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="6"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="dragHose36.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="horschDragHose36_main_component1" shapeId="1" dynamic="true" compound="true" density="0.5" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="1">
+      <Shape name="frame" translation="-6.93889e-18 0 0" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="2" skinBindNodeIds="2 5 7 9 10 12 14 20 23 26 31 38 41 43 45 51 54 57 62 69 72 73 74 77 78 84" nodeId="2">
+        <TransformGroup name="attacherJoint" translation="0.0158768 0.784568 0.439495" rotation="0 90 0" nodeId="3"/>
+        <TransformGroup name="upperLinkRot" translation="0.0158768 2.50066 0.182986" nodeId="4">
+          <TransformGroup name="upperLink" translation="-2.22045e-18 2.84217e-16 4.44089e-18" rotation="85.0388 0 0" collision="false" nodeId="5">
+            <TransformGroup name="upperLinkBone" translation="-0.0158768 0.178617 0.107962" rotation="-85.0388 0 0" nodeId="6"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="supportArms" translation="1.33227e-17 0 0" collision="false" nodeId="7">
+          <Shape name="supportCol" translation="0 0.234448 0.0479389" visibility="false" shapeId="3" compoundChild="true" density="0.001" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="8"/>
+        </TransformGroup>
+        <TransformGroup name="lift" translation="1.55431e-17 0 0" collision="false" nodeId="9">
+          <TransformGroup name="leftArm" translation="1.33626 0.7467 -0.186882" collision="false" nodeId="10">
+            <TransformGroup name="hydraulicLeftArmRef" translation="1.11107 -0.0683425 0.138456" rotation="0 94.5 0" collision="false" nodeId="11"/>
+            <TransformGroup name="leftOuterArmRot" translation="7.681 -0.0024134 -0.0668971" collision="false" nodeId="12">
+              <TransformGroup name="hydraulicLeftOuterArm2Ref" translation="0.243338 0.134242 0.0488147" rotation="0 36.5998 0" collision="false" nodeId="13"/>
+              <TransformGroup name="leftOuterArm" translation="0.50137 0.000911016 0.0563245" collision="false" nodeId="14">
+                <TransformGroup name="hydraulicLeftOuterArmHeightRef" translation="0.458208 1.02061 -0.00168813" rotation="10 90 0" scale="1 1 1" collision="false" nodeId="15"/>
+                <Shape name="leftOuterArmDecal_decal" translation="5.57909 1.21084 0.126533" shapeId="4" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="30" nodeId="16"/>
+                <Shape name="leftOuterArmCol" translation="3.99526 0.60017 0.0810466" visibility="false" shapeId="5" compoundChild="true" density="0.001" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="17"/>
+                <TransformGroup name="leftOuterArmBone" translation="4.48137 -0.745198 0.197455" nodeId="18"/>
+              </TransformGroup>
+              <Shape name="hydraulicLeftOuterArmHeight" translation="0.228923 1.15202 0.0579636" rotation="10 90 0" scale="1 1 1" shapeId="6" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="19">
+                <TransformGroup name="hydraulicLeftOuterArmHeightPunch" translation="0.00332764 -0.00163787 0.0720226" rotation="2.79672e-16 -6.06643e-21 -7.58303e-22" scale="1 1 1" collision="false" nodeId="20"/>
+                <TransformGroup name="hydraulicLeftOuterArmHeightBone" translation="-0.00190456 0.0212931 0.23265" rotation="-89.9998 -80 89.9998" nodeId="21"/>
+              </Shape>
+              <TransformGroup name="leftOuterArmRotBone" translation="0.0357362 0.664497 0.0598682" nodeId="22"/>
+            </TransformGroup>
+            <TransformGroup name="leftOuterArmRotArm" translation="7.68104 0 -0.0669176" collision="false" nodeId="23">
+              <TransformGroup name="hydraulicLeftOuterArmRef" translation="-0.186981 0.27285 0.149079" rotation="0 82.5332 0" collision="false" nodeId="24"/>
+              <Shape name="hydraulicLeftOuterArm2" translation="-0.307237 0.131637 -0.684467" rotation="0 36.5998 0" shapeId="7" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="25">
+                <TransformGroup name="hydraulicLeftOuterArm2Punch" translation="0.00477386 0.000191956 0.20343" collision="false" nodeId="26"/>
+                <Shape name="hydraulicLeftOuterArm2Decal_decal" translation="-0.000380622 0.048138 0.143039" rotation="0 -36.5998 0" shapeId="8" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="30" nodeId="27"/>
+                <TransformGroup name="hydraulicLeftOuterArm2Bone" translation="0.064221 0.0498862 0.253898" rotation="0 -36.5998 0" nodeId="28"/>
+              </Shape>
+              <TransformGroup name="leftOuterArmRotArmBone" translation="-0.3433 0.181523 -0.274663" nodeId="29"/>
+            </TransformGroup>
+            <Shape name="hydraulicLeftOuterArm" translation="6.88147 0.272961 0.00120074" rotation="0 82.5332 0" scale="1 1 1" shapeId="9" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="30">
+              <TransformGroup name="hydraulicLeftOuterArmPunch" translation="-0.000668358 -0.000111694 0.0622343" rotation="0 -1.59028e-15 0" scale="1 1 1" collision="false" nodeId="31"/>
+              <Shape name="hydraulicLeftOuterArmDecal_decal" translation="-0.000246315 0.047957 0.144318" rotation="0 -82.5332 0" scale="1 1 1" shapeId="10" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="30" nodeId="32"/>
+              <TransformGroup name="hydraulicLeftOuterArmBone" translation="-0.064642 0.0110267 0.220535" rotation="0 -82.5332 0" nodeId="33"/>
+            </Shape>
+            <Shape name="leftArmDecal_decal" translation="4.87513 1.17876 0.265883" shapeId="11" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="30" nodeId="34"/>
+            <Shape name="supportArms1" translation="7.45974 -2.05808 -0.00646634" shapeId="12" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="75" nodeId="35">
+              <Shape name="supportCol3" translation="4.54747e-15 -0.0329213 0" visibility="false" shapeId="13" compoundChild="true" density="0.001" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="36"/>
+            </Shape>
+            <TransformGroup name="leftArmBone" translation="4.66374 -0.7467 0.186882" nodeId="37"/>
+            <TransformGroup name="leftArmHosesRotation" translation="7.64395 1.09407 0.211874" collision="false" nodeId="38">
+              <TransformGroup name="leftArmHosesRotationBone" translation="7.65618 1.3004 0.220669" nodeId="39"/>
+            </TransformGroup>
+            <Shape name="leftArmCol" translation="3.85444 0.598667 0.0704739" visibility="false" shapeId="14" compoundChild="true" density="0.001" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="40"/>
+          </TransformGroup>
+          <TransformGroup name="rightArm" translation="-1.3045 0.7467 -0.1869" collision="false" nodeId="41">
+            <TransformGroup name="hydraulicRightArmRef" translation="-1.1108 -0.0683423 0.138496" rotation="0 265.5 0" collision="false" nodeId="42"/>
+            <TransformGroup name="rightOuterArmRot" translation="-7.68101 -0.0024132 -0.0668809" collision="false" nodeId="43">
+              <TransformGroup name="hydraulicRightOuterArm2Ref" translation="-0.213764 0.133475 0.0168103" rotation="-6.51925e-11 -36.6 0" collision="false" nodeId="44"/>
+              <TransformGroup name="rightOuterArm" translation="-0.498505 0.000910892 0.0563249" collision="false" nodeId="45">
+                <TransformGroup name="hydraulicRightOuterArmHeightRef" translation="-0.46147 1.02313 0.00117089" rotation="10.0009 -90 0" scale="1 1 1" collision="false" nodeId="46"/>
+                <Shape name="rightOuterArmDecal_decal" translation="-5.58196 1.21084 0.126534" shapeId="15" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="30" nodeId="47"/>
+                <Shape name="leftOuterArmCol" translation="-4.02988 0.60017 0.0810475" visibility="false" shapeId="16" compoundChild="true" density="0.001" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="48"/>
+                <TransformGroup name="rightOuterArmBone" translation="-4.51599 -0.745198 0.197456" nodeId="49"/>
+              </TransformGroup>
+              <Shape name="hydraulicRightOuterArmHeight" translation="-0.228921 1.15202 0.0579649" rotation="10.0009 -90 0" scale="1 1 1" shapeId="17" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="50">
+                <TransformGroup name="hydraulicRightOuterArmHeightPunch" translation="-0.000469565 0.000920577 0.0719768" rotation="2.65183e-15 1.38084e-16 7.83058e-16" scale="1 1 1" collision="false" nodeId="51"/>
+                <TransformGroup name="hydraulicRightOuterArmHeightBone" translation="0.00190454 0.0268385 0.264077" rotation="-89.9998 79.9991 -89.9998" nodeId="52"/>
+              </Shape>
+              <TransformGroup name="rightOuterArmRotBone" translation="-0.0673133 0.664497 0.0598696" nodeId="53"/>
+            </TransformGroup>
+            <TransformGroup name="rightOuterArmRotArm" translation="-7.681 0 -0.0669" collision="false" nodeId="54">
+              <TransformGroup name="hydraulicRightOuterArmRef" translation="0.186228 0.27285 0.147852" rotation="0 -82.5332 0" collision="false" nodeId="55"/>
+              <Shape name="hydraulicRightOuterArm2" translation="0.307762 0.131637 -0.685235" rotation="0 -36.6 4.25521e-06" scale="1 1 1" shapeId="18" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="56">
+                <TransformGroup name="hydraulicRightOuterArm2Punch" translation="-0.000108328 -0.000574766 0.916844" rotation="-2.53713e-06 -6.36111e-15 -3.41615e-06" scale="1 1 1" collision="false" nodeId="57"/>
+                <Shape name="hydraulicRightOuterArm2Decal_decal" translation="0.000382578 0.048138 0.143995" rotation="-3.1602e-06 36.6 -5.30035e-06" scale="1 1 1" shapeId="19" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="30" nodeId="58"/>
+                <TransformGroup name="hydraulicRightOuterArm2Bone" translation="-0.0899719 0.0498862 0.27398" rotation="-3.1602e-06 36.6 -5.30035e-06" nodeId="59"/>
+              </Shape>
+              <TransformGroup name="rightOuterArmRotArmBone" translation="0.311296 0.181523 -0.274663" nodeId="60"/>
+            </TransformGroup>
+            <Shape name="hydraulicRightOuterArm" translation="-6.88165 0.272962 0.00124003" rotation="0 -82.5332 0" scale="1 1 1" shapeId="20" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="61">
+              <TransformGroup name="hydraulicRightOuterArmPunch" translation="-0.000640035 -0.000111694 0.618282" rotation="0 -1.59028e-15 0" scale="1 1 1" collision="false" nodeId="62"/>
+              <Shape name="hydraulicRightOuterArmDecal_decal" translation="0.000246808 0.047957 0.144147" rotation="0 82.5332 0" scale="1 1 1" shapeId="21" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="30" nodeId="63"/>
+              <TransformGroup name="hydraulicRightOuterArmBone" translation="0.0604872 0.0110267 0.252067" rotation="0 82.5332 0" nodeId="64"/>
+            </Shape>
+            <Shape name="rightArmDecal_decal" translation="-4.87514 1.17876 0.265901" shapeId="22" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="30" nodeId="65"/>
+            <Shape name="supportArms1s" translation="-7.49159 -2.05808 -0.00644876" shapeId="23" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="75" nodeId="66">
+              <Shape name="supportCol" translation="4.54747e-15 -0.0329213 0" visibility="false" shapeId="24" compoundChild="true" density="0.001" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="67"/>
+            </Shape>
+            <TransformGroup name="rightArmBone" translation="-4.6955 -0.7467 0.1869" nodeId="68"/>
+            <TransformGroup name="rightArmHosesRotation" translation="-7.64396 1.09407 0.211891" collision="false" nodeId="69">
+              <TransformGroup name="rightArmHosesRotationBone" translation="-7.6875 1.3004 0.220686" nodeId="70"/>
+            </TransformGroup>
+            <Shape name="rightArmCol" translation="-3.85444 0.598668 0.0704915" visibility="false" shapeId="25" compoundChild="true" density="0.001" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="71"/>
+          </TransformGroup>
+          <TransformGroup name="heightMover" translation="0.0158768 1.97526 -0.223521" collision="false" nodeId="72"/>
+          <TransformGroup name="hydraulicLeftArm" translation="1.01774 0.678358 0.0640853" rotation="0 94.5 0" collision="false" nodeId="73">
+            <TransformGroup name="hydraulicLeftArmPunch" translation="4.80689e-14 -8.52651e-16 1.43402" collision="false" nodeId="74"/>
+            <Shape name="hydraulicLeftArmDecal_decal" translation="-0.000341215 0.0465492 0.165673" rotation="0 265.5 0" shapeId="26" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="30" nodeId="75"/>
+            <TransformGroup name="hydraulicLeftArmBone" translation="0.0272268 0.00312121 0.470849" rotation="0 265.5 0" nodeId="76"/>
+          </TransformGroup>
+          <TransformGroup name="hydraulicRightArm" translation="-0.985863 0.678358 0.0640949" rotation="0 265.5 0" collision="false" nodeId="77">
+            <TransformGroup name="hydraulicRightArmPunch" translation="-4.95242e-14 -2.84217e-16 1.43386" collision="false" nodeId="78"/>
+            <Shape name="hydraulicRightArmDecal_decal" translation="0.000341191 0.0465492 0.165795" rotation="0 94.5 0" shapeId="27" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="30" nodeId="79"/>
+            <TransformGroup name="hydraulicRightArmBone" translation="-0.0247168 0.00312121 0.502864" rotation="0 94.5 0" nodeId="80"/>
+          </TransformGroup>
+          <TransformGroup name="rope1Ref" translation="0.0158768 1.37585 -0.0771458" rotation="88.9226 180 0" nodeId="81"/>
+          <TransformGroup name="topRightPipeStart" translation="0.0184732 1.82583 -0.863291" rotation="-90 0 0" nodeId="82"/>
+          <TransformGroup name="liftBone" translation="6.93889e-18 0 -1" nodeId="83"/>
+        </TransformGroup>
+        <TransformGroup name="hydraulicLift" translation="-9.86076e-34 0.611481 0" collision="false" nodeId="84">
+          <Shape name="rope1" translation="0.0158768 2.11362 -0.052489" rotation="88.9226 180 0" shapeId="28" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="75" nodeId="85"/>
+          <Shape name="rope2" translation="0.0158768 2.11834 0.106073" rotation="89.4582 0 0" shapeId="29" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="75" nodeId="86"/>
+        </TransformGroup>
+        <TransformGroup name="rope2Ref" translation="0.0158768 1.27574 0.119463" rotation="89.4582 0 0" nodeId="87"/>
+        <TransformGroup name="workAreas" translation="6.93889e-18 0 0" nodeId="88">
+          <TransformGroup name="areaStart" translation="18 0 -0.13" nodeId="89"/>
+          <TransformGroup name="areaWidth" translation="-18 0 -0.13" nodeId="90"/>
+          <TransformGroup name="areaHeight" translation="18 0 -0.3" nodeId="91"/>
+        </TransformGroup>
+        <TransformGroup name="ai" translation="6.93889e-18 0 0" nodeId="92">
+          <TransformGroup name="aiMarker" nodeId="93">
+            <TransformGroup name="aiMarkerLeft" translation="18 0 -0.13" nodeId="94"/>
+            <TransformGroup name="aiMakerRight" translation="-18 0 -0.13" nodeId="95"/>
+            <TransformGroup name="aiMarkerBack" translation="0 0 -0.438941" nodeId="96"/>
+          </TransformGroup>
+          <Shape name="aiCollisionTrigger" translation="0 2.19992 -0.5" visibility="false" shapeId="30" kinematic="true" compound="true" trigger="true" collisionMask="1056768" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="97"/>
+        </TransformGroup>
+        <TransformGroup name="skinning" nodeId="98">
+          <Shape name="hoses" translation="6.93889e-18 0 0" shapeId="31" castsShadows="true" receiveShadows="true" materialIds="2" skinBindNodeIds="6 18 21 22 28 29 33 37 49 52 53 59 60 64 68 76 80 83 39 70 100" clipDistance="150" nodeId="99"/>
+        </TransformGroup>
+        <TransformGroup name="worldBone" translation="6.93889e-18 0 2" nodeId="100"/>
+        <TransformGroup name="topRightPipeMiddle" translation="0.0184732 3.76935 -0.0216328" rotation="-11.2299 0 0" nodeId="101"/>
+        <TransformGroup name="cableBoundleNode" translation="-0.142369 1.88243 0.26999" collision="false" clipDistance="300" nodeId="102">
+          <Shape name="detachedHose" translation="-0.00668693 -0.752405 0.0780135" shapeId="32" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="103"/>
+        </TransformGroup>
+      </Shape>
+    </Shape>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="6">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="18">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="21">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="22">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="28">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="29">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="33">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="37">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="39">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="49">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="52">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="53">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="59">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="60">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="64">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="68">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="70">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="76">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="80">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="83">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="100">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+  </UserAttributes>
+</i3D>
