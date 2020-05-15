@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="augerWagon">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Shuttle 2.000</name>
+        <functions>
+            <function>$l10n_function_augerWagon</function>
+        </functions>
+        <image>horsch/eveShuttle/store_seedShuttle.png</image>
+        <price>8000</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>HORSCH</brand>
+        <category>seeders</category>
+    </storeData>
+
+    <base>
+        <typeDesc>Shuttle 2.000</typeDesc>
+        <filename>horsch/eveShuttle/seedShuttle.i3d</filename>
+        <size width="3.5" length="2.5" lengthOffset="-0.3"/>
+        <components>
+            <component centerOfMass="0 0.5 0" solverIterationCount="20" mass="500" />
+        </components>
+        <schemaOverlay attacherJointPosition="0 0">
+            <default name="DEFAULT_IMPLEMENT"/>
+            <selected name="DEFAULT_IMPLEMENT_SELECTED"/>
+        </schemaOverlay>
+    </base>
+
+    <attachable>
+        <inputAttacherJointConfigurations>
+          <inputAttacherJointConfiguration name="$l10n_configuration_frontloaderAttacher">
+                <inputAttacherJoint node="attacherJointFrontloader" jointType="frontloader" />
+            <objectChange node="stollPalletFork" visibilityActive="true" />
+            <objectChange node="telehandlerFork" visibilityActive="false" />
+          </inputAttacherJointConfiguration>
+          <inputAttacherJointConfiguration name="$l10n_configuration_inputAttacherTeleLoaders">
+                <inputAttacherJoint node="attacherJointTelehandler" jointType="telehandler" />
+            <objectChange node="stollPalletFork" visibilityActive="false" />
+            <objectChange node="telehandlerFork" visibilityActive="true" />
+          </inputAttacherJointConfiguration>
+        </inputAttacherJointConfigurations>
+
+    </attachable>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="AUGERWAGON" capacity="2200">
+                        <exactFillRootNode node="exactFillRootNode" />
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <fillVolume>
+        <fillVolumeConfigurations>
+            <fillVolumeConfiguration>
+                <volumes>
+                    <volume node="fillVolume" fillUnitIndex="1" />
+                </volumes>
+            </fillVolumeConfiguration>
+        </fillVolumeConfigurations>
+
+        <unloadInfos>
+            <unloadInfo>
+                <node node="fillUnloadNode" width="2" length="0.4" />
+            </unloadInfo>
+        </unloadInfos>
+
+        <loadInfos>
+            <loadInfo>
+                <node node="fillLoadNode" width="2" length="0.4" />
+            </loadInfo>
+        </loadInfos>
+    </fillVolume>
+
+    <pipe unloadInfoIndex="1">
+        <dischargeNode index="1" />
+        <states num="2" unloading="2" />
+        <animation name="grainDoor" speedScale="1" />
+        <unloadingTriggers>
+            <unloadingTrigger node="trailerTrigger" />
+        </unloadingTriggers>
+    </pipe>
+
+    <dischargeable>
+        <dischargeNode node="dischargeNode" emptySpeed="200" fillUnitIndex="1" unloadInfoIndex="1" >
+            <info width="0.3" length="0.3" useRaycastHitPosition="true"/>
+
+            <effects>
+                <effectNode effectClass="PipeEffect" effectNode="pipeEffect" materialType="pipe" materialTypeId="1" delay="0" maxBending="1" extraDistance="0.5"/>
+            </effects>
+        </dischargeNode>
+    </dischargeable>
+
+    <animations>
+        <animation name="toggleCover">
+            <part node="cover" startTime="0.1" endTime="0.2" visibility="true" />
+            <part node="cover" startTime="0.2" endTime="0.3" visibility="false" />
+        </animation>
+        <animation name="grainDoor">
+            <part node="grainDoor" startTime="0" endTime="0.5" startTrans="0 0.372 0.616" endTrans="0 0.45 0.616"/>
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="grainDoor">
+                <dependentPart node="grainDoorArm01" />
+            </movingTool>
+        </movingTools>
+
+        <movingParts>
+            <movingPart node="grainDoorArm01" localReferencePoint="grainDoorArm02" referencePoint="grainDoorArm01RefFrame" referenceFrame="grainDoorArm01RefFrame">
+                <dependentPart node="grainDoorArm02" />
+            </movingPart>
+            <movingPart node="grainDoorArm02" referencePoint="grainDoorArm02Ref" referenceFrame="grainDoorArm02Ref"/>
+        </movingParts>
+
+        <sounds>
+            <hydraulic template="DEFAULT_HYDRAULIC_SOUND"/>
+        </sounds>
+    </cylindered>
+
+    <cover>
+        <coverConfigurations>
+            <coverConfiguration >
+                <cover openAnimation="toggleCover" fillUnitIndices="1" />
+            </coverConfiguration>
+        </coverConfigurations>
+    </cover>
+
+    <foliageBending>
+        <bendingNode minX="-1.2" maxX="1.2" minZ="-0.8" maxZ="0.7" yOffset="0.1" />
+    </foliageBending>
+
+    <tipOccluder>
+        <occlusionArea start="tipOcclusionAreaStart" width="tipOcclusionAreaWidth" height="tipOcclusionAreaHeight"/>
+    </tipOccluder>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="2" fieldMultiplier="2"/>
+
+    <i3dMappings>
+        <i3dMapping id="seedShuttle_main_component1" node="0>" />
+        <i3dMapping id="seedShuttle_vis" node="0>0" />
+        <i3dMapping id="cover" node="0>0|0" />
+        <i3dMapping id="stollPalletFork" node="0>0|1" />
+        <i3dMapping id="telehandlerFork" node="0>0|2" />
+        <i3dMapping id="attacherJointFrontloader" node="0>0|3" />
+        <i3dMapping id="attacherJointTelehandler" node="0>0|4" />
+        <i3dMapping id="fillVolume" node="0>0|5|0" />
+        <i3dMapping id="exactFillRootNode" node="0>0|5|1" />
+        <i3dMapping id="fillLoadNode" node="0>0|5|2" />
+        <i3dMapping id="fillUnloadNode" node="0>0|5|3" />
+        <i3dMapping id="trailerTrigger" node="0>0|5|4" />
+        <i3dMapping id="dischargeNode" node="0>0|5|5" />
+        <i3dMapping id="pipeEffect" node="0>0|6|0" />
+        <i3dMapping id="tipOcclusionAreaStart" node="0>0|7|0" />
+        <i3dMapping id="tipOcclusionAreaWidth" node="0>0|7|1" />
+        <i3dMapping id="tipOcclusionAreaHeight" node="0>0|7|2" />
+        <i3dMapping id="grainDoor" node="0>0|8|0" />
+        <i3dMapping id="grainDoorArm02Ref" node="0>0|8|0|0" />
+        <i3dMapping id="grainDoorArm01RefFrame" node="0>0|8|0|1" />
+        <i3dMapping id="grainDoorArm01" node="0>0|8|1" />
+        <i3dMapping id="grainDoorArm02" node="0>0|8|1|0" />
+        <i3dMapping id="componentJoint" node="0>0|10" />
+    </i3dMappings>
+</vehicle>
