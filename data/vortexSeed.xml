@@ -263,17 +263,14 @@
             <node node="smallChunkEmitter2Right" refNodeIndex="3" particleType="SOIL_CHUNKS" worldSpace="false"/>
         </particle>
     </workParticles>
-
     <sprayer fillUnitIndex="2" unloadInfoIndex="2" loadInfoIndex="2" >
         <usageScales workingWidth="12" scale="1" />
     </sprayer>
-
     <foldable>
         <foldingParts startMoveDirection="1" foldMiddleAnimTime="0.125" turnOnFoldMinLimit="0" turnOnFoldMaxLimit="0.2">
             <foldingPart animationName="folding" speedScale="1"/>
         </foldingParts>
     </foldable>
-
     <animations>
         <animation name="folding">
             <part node="joint" startTime="0" endTime="1" componentJointIndex="1" startTransLimit="0 0.3 0" endTransLimit="0 0 0"/>
@@ -372,9 +369,53 @@
             <hydraulic template="DEFAULT_HYDRAULIC_SOUND" linkNode="0>"/>
         </sounds>
     </cylindered>
-
+    <configurationSets title="$l10n_configuration_storage">
+        <configurationSet name="$l10n_config_5050" price="0">
+            <configuration name="fillVolume"   index="1" />
+            <configuration name="fillUnit"     index="1" />
+        </configurationSet>
+        <configurationSet name="$l10n_config_6040" price="500">
+            <configuration name="fillVolume"   index="1" />
+            <configuration name="fillUnit"     index="2" />
+        </configurationSet>
+        <configurationSet name="$l10n_config_7030" price="500">
+            <configuration name="fillVolume"   index="1" />
+            <configuration name="fillUnit"     index="3" />
+        </configurationSet>
+        <configurationSet name="$l10n_config_8020" price="500">
+            <configuration name="fillVolume"   index="1" />
+            <configuration name="fillUnit"     index="4" />
+        </configurationSet>
+        <configurationSet name="$l10n_config_seed" price="0">
+            <configuration name="fillVolume"   index="2" />
+            <configuration name="fillUnit"     index="5" />
+        </configurationSet>
+        <configurationSet name="$l10n_config_4060" price="500">
+            <configuration name="fillVolume"   index="1" />
+            <configuration name="fillUnit"     index="6" />
+        </configurationSet>
+        <configurationSet name="$l10n_config_3070" price="500">
+            <configuration name="fillVolume"   index="1" />
+            <configuration name="fillUnit"     index="7" />
+        </configurationSet>
+        <configurationSet name="$l10n_config_2080" price="500">
+            <configuration name="fillVolume"   index="1" />
+            <configuration name="fillUnit"     index="8" />
+        </configurationSet>
+    </configurationSets>
     <fillUnit>
         <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <unloading width="24" offset="0 0 0" />
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="seeds" capacity="5000">
+                        <exactFillRootNode node="exactFillRootNode" extraEffectDistance="0.6"/>
+                    </fillUnit>
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="fertilizer" capacity="5000">
+                      <exactFillRootNode node="exactFillRootNodeFertilizer" extraEffectDistance="0.6"/>
+                  </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
             <fillUnitConfiguration>
                 <fillUnits>
                     <unloading width="24" offset="0 0 0" />
@@ -386,15 +427,82 @@
                   </fillUnit>
                 </fillUnits>
             </fillUnitConfiguration>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <unloading width="24" offset="0 0 0" />
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="seeds" capacity="7000">
+                        <exactFillRootNode node="exactFillRootNode" extraEffectDistance="0.6"/>
+                    </fillUnit>
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="fertilizer" capacity="3000">
+                      <exactFillRootNode node="exactFillRootNodeFertilizer" extraEffectDistance="0.6"/>
+                  </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <unloading width="24" offset="0 0 0" />
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="seeds" capacity="8000">
+                        <exactFillRootNode node="exactFillRootNode" extraEffectDistance="0.6"/>
+                    </fillUnit>
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="fertilizer" capacity="2000">
+                      <exactFillRootNode node="exactFillRootNodeFertilizer" extraEffectDistance="0.6"/>
+                  </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <unloading width="24" offset="0 0 0" />
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="seeds" capacity="10000">
+                        <exactFillRootNode node="exactFillRootNode" extraEffectDistance="0.6"/>
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <unloading width="24" offset="0 0 0" />
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="seeds" capacity="4000">
+                        <exactFillRootNode node="exactFillRootNode" extraEffectDistance="0.6"/>
+                    </fillUnit>
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="fertilizer" capacity="6000">
+                      <exactFillRootNode node="exactFillRootNodeFertilizer" extraEffectDistance="0.6"/>
+                  </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <unloading width="24" offset="0 0 0" />
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="seeds" capacity="3000">
+                        <exactFillRootNode node="exactFillRootNode" extraEffectDistance="0.6"/>
+                    </fillUnit>
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="fertilizer" capacity="7000">
+                      <exactFillRootNode node="exactFillRootNodeFertilizer" extraEffectDistance="0.6"/>
+                  </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <unloading width="24" offset="0 0 0" />
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="seeds" capacity="2000">
+                        <exactFillRootNode node="exactFillRootNode" extraEffectDistance="0.6"/>
+                    </fillUnit>
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="fertilizer" capacity="8000">
+                      <exactFillRootNode node="exactFillRootNodeFertilizer" extraEffectDistance="0.6"/>
+                  </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
         </fillUnitConfigurations>
     </fillUnit>
-
     <fillVolume>
         <fillVolumeConfigurations>
             <fillVolumeConfiguration>
                 <volumes>
                     <volume node="fillVolumeFront" fillUnitIndex="1"/>
                     <volume node="fillVolumeBack" fillUnitIndex="2"/>
+                </volumes>
+            </fillVolumeConfiguration>
+            <fillVolumeConfiguration>
+                <volumes>
+                    <volume node="fillVolumeFront" fillUnitIndex="1"/>
                 </volumes>
             </fillVolumeConfiguration>
         </fillVolumeConfigurations>
@@ -415,7 +523,6 @@
             </loadInfo>
         </loadInfos>
     </fillVolume>
-
     <sowingMachine fillUnitIndex="1">
         <seedFruitTypeCategories>sowingMachine</seedFruitTypeCategories>
         <needsActivation value="true"/>

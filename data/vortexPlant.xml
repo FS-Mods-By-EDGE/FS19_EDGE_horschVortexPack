@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <vehicle type="fertilizingSowingMachine">
     <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
-
     <storeData>
         <name>$l10n_name_vortexPlant</name>
         <specs>
             <neededPower>320</neededPower>
             <workingWidth>12.0</workingWidth>
+            <combination>$l10n_combo_vortexShuttle</combination>
         </specs>
         <functions>
             <function>$l10n_function_sowingMachine</function>
             <function>$l10n_function_sowingMachineDirect</function>
         </functions>
-        <image>sore/store_vortexPlant.dds</image>
+        <image>store/store_vortexPlant.dds</image>
         <price>180000</price>
         <lifetime>600</lifetime>
         <rotation>0</rotation>
@@ -372,7 +372,40 @@
             <hydraulic template="DEFAULT_HYDRAULIC_SOUND" linkNode="0>"/>
         </sounds>
     </cylindered>
-
+    <configurationSets title="$l10n_configuration_storage">
+        <configurationSet name="$l10n_config_5050" price="0">
+            <configuration name="fillVolume"   index="1" />
+            <configuration name="fillUnit"     index="1" />
+        </configurationSet>
+        <configurationSet name="$l10n_config_6040" price="500">
+            <configuration name="fillVolume"   index="1" />
+            <configuration name="fillUnit"     index="2" />
+        </configurationSet>
+        <configurationSet name="$l10n_config_7030" price="500">
+            <configuration name="fillVolume"   index="1" />
+            <configuration name="fillUnit"     index="3" />
+        </configurationSet>
+        <configurationSet name="$l10n_config_8020" price="500">
+            <configuration name="fillVolume"   index="1" />
+            <configuration name="fillUnit"     index="4" />
+        </configurationSet>
+        <configurationSet name="$l10n_config_seed" price="0">
+            <configuration name="fillVolume"   index="2" />
+            <configuration name="fillUnit"     index="5" />
+        </configurationSet>
+        <configurationSet name="$l10n_config_4060" price="500">
+            <configuration name="fillVolume"   index="1" />
+            <configuration name="fillUnit"     index="6" />
+        </configurationSet>
+        <configurationSet name="$l10n_config_3070" price="500">
+            <configuration name="fillVolume"   index="1" />
+            <configuration name="fillUnit"     index="7" />
+        </configurationSet>
+        <configurationSet name="$l10n_config_2080" price="500">
+            <configuration name="fillVolume"   index="1" />
+            <configuration name="fillUnit"     index="8" />
+        </configurationSet>
+    </configurationSets>
     <fillUnit>
         <fillUnitConfigurations>
             <fillUnitConfiguration>
@@ -386,15 +419,93 @@
                   </fillUnit>
                 </fillUnits>
             </fillUnitConfiguration>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <unloading width="24" offset="0 0 0" />
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="seeds" capacity="6000">
+                        <exactFillRootNode node="exactFillRootNode" extraEffectDistance="0.6"/>
+                    </fillUnit>
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="fertilizer" capacity="4000">
+                      <exactFillRootNode node="exactFillRootNodeFertilizer" extraEffectDistance="0.6"/>
+                  </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <unloading width="24" offset="0 0 0" />
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="seeds" capacity="7000">
+                        <exactFillRootNode node="exactFillRootNode" extraEffectDistance="0.6"/>
+                    </fillUnit>
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="fertilizer" capacity="3000">
+                      <exactFillRootNode node="exactFillRootNodeFertilizer" extraEffectDistance="0.6"/>
+                  </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <unloading width="24" offset="0 0 0" />
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="seeds" capacity="8000">
+                        <exactFillRootNode node="exactFillRootNode" extraEffectDistance="0.6"/>
+                    </fillUnit>
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="fertilizer" capacity="2000">
+                      <exactFillRootNode node="exactFillRootNodeFertilizer" extraEffectDistance="0.6"/>
+                  </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <unloading width="24" offset="0 0 0" />
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="seeds" capacity="10000">
+                        <exactFillRootNode node="exactFillRootNode" extraEffectDistance="0.6"/>
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <unloading width="24" offset="0 0 0" />
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="seeds" capacity="4000">
+                        <exactFillRootNode node="exactFillRootNode" extraEffectDistance="0.6"/>
+                    </fillUnit>
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="fertilizer" capacity="6000">
+                      <exactFillRootNode node="exactFillRootNodeFertilizer" extraEffectDistance="0.6"/>
+                  </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <unloading width="24" offset="0 0 0" />
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="seeds" capacity="3000">
+                        <exactFillRootNode node="exactFillRootNode" extraEffectDistance="0.6"/>
+                    </fillUnit>
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="fertilizer" capacity="7000">
+                      <exactFillRootNode node="exactFillRootNodeFertilizer" extraEffectDistance="0.6"/>
+                  </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <unloading width="24" offset="0 0 0" />
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="seeds" capacity="2000">
+                        <exactFillRootNode node="exactFillRootNode" extraEffectDistance="0.6"/>
+                    </fillUnit>
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="fertilizer" capacity="8000">
+                      <exactFillRootNode node="exactFillRootNodeFertilizer" extraEffectDistance="0.6"/>
+                  </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
         </fillUnitConfigurations>
     </fillUnit>
-
     <fillVolume>
         <fillVolumeConfigurations>
             <fillVolumeConfiguration>
                 <volumes>
                     <volume node="fillVolumeFront" fillUnitIndex="1"/>
                     <volume node="fillVolumeBack" fillUnitIndex="2"/>
+                </volumes>
+            </fillVolumeConfiguration>
+            <fillVolumeConfiguration>
+                <volumes>
+                    <volume node="fillVolumeFront" fillUnitIndex="1"/>
                 </volumes>
             </fillVolumeConfiguration>
         </fillVolumeConfigurations>
@@ -417,7 +528,7 @@
     </fillVolume>
 
     <sowingMachine fillUnitIndex="1">
-        <seedFruitTypeCategories>sowingMachine</seedFruitTypeCategories>
+        <seedFruitTypeCategories>planter</seedFruitTypeCategories>
         <needsActivation value="true"/>
         <useDirectPlanting value="true" />
         <sounds>
@@ -459,100 +570,293 @@
         <bendingNode minX="-3" maxX="1" minZ="0.5" maxZ="3" yOffset="-0.3" node="rightArmRot" />
         <bendingNode minX="-2.5" maxX="0" minZ="-3" maxZ="0.7" yOffset="-0.4" node="rightOuterArm" />
     </foliageBending>
-    <designConfigurations>
-        <designConfiguration name="$l10n_config_mirrorPainted" price="650">
-            <objectChange node="leftMirrorPainted" visibilityActive="true"/>
-            <objectChange node="rightMirrorPainted" visibilityActive="true"/>
-            <objectChange node="leftMirror" visibilityActive="false"/>
-            <objectChange node="rightMirror" visibilityActive="false"/>
-            <objectChange node="grid_DecalPainted" visibilityActive="false"/>
-            <objectChange node="grid_Decal" visibilityActive="true"/>
-        </designConfiguration>
-        <designConfiguration name="$l10n_config_gridPained" price="1300">
-            <objectChange node="leftMirrorPainted" visibilityActive="true"/>
-            <objectChange node="rightMirrorPainted" visibilityActive="true"/>
-            <objectChange node="leftMirror" visibilityActive="false"/>
-            <objectChange node="rightMirror" visibilityActive="false"/>
-            <objectChange node="grid_DecalPainted" visibilityActive="true"/>
-            <objectChange node="grid_Decal" visibilityActive="false"/>
-        </designConfiguration>
-        <designConfiguration name="$l10n_config_gridonly" price="650">
-            <objectChange node="leftMirrorPainted" visibilityActive="false"/>
-            <objectChange node="rightMirrorPainted" visibilityActive="false"/>
-            <objectChange node="leftMirror" visibilityActive="true"/>
-            <objectChange node="rightMirror" visibilityActive="true"/>
-            <objectChange node="grid_DecalPainted" visibilityActive="true"/>
-            <objectChange node="grid_Decal" visibilityActive="false"/>
-        </designConfiguration>
-        <designConfiguration name="$l10n_config_mirror">
-            <objectChange node="leftMirrorPainted" visibilityActive="false"/>
-            <objectChange node="rightMirrorPainted" visibilityActive="false"/>
-            <objectChange node="leftMirror" visibilityActive="true"/>
-            <objectChange node="rightMirror" visibilityActive="true"/>
-            <objectChange node="grid_DecalPainted" visibilityActive="false"/>
-            <objectChange node="grid_Decal" visibilityActive="true"/>
-        </designConfiguration>
-    </designConfigurations>
 
     <baseMaterial>
         <material name="vortexPlant_mat" baseNode="horschEvo_vis">
             <shaderParameter name="colorMat0" value="HORSCH_RED1"/>
+            <shaderParameter name="colorMat2" value="SHARED_BLACK2"/>
+            <shaderParameter name="colorMat1" value="SHARED_BLACK2"/>
         </material>
-        <material name="sW12000_mat" baseNode="horschSW_vis">
+        <material name="horchVortex_mat" baseNode="horschSW_vis">
             <shaderParameter name="colorMat0" value="HORSCH_RED1"/>
+            <shaderParameter name="colorMat2" value="SHARED_BLACK2"/>
         </material>
-        <material name="sW12000Transparent01_mat" baseNode="alphaParts">
+        <material name="horchVortexTransparent01_mat" baseNode="alphaParts">
             <shaderParameter name="colorMat0" value="HORSCH_RED1"/>
+            <shaderParameter name="colorMat2" value="SHARED_BLACK2"/>
         </material>
-        <material name="sW12000Transparent01_mat" baseNode="transparent">
+        <material name="vortexPlantStairsTransparent_mat" baseNode="transparent">
             <shaderParameter name="colorMat0" value="HORSCH_RED1"/>
+            <shaderParameter name="colorMat2" value="SHARED_BLACK2"/>
         </material>
         <material name="vortexPlantStairs_mat" baseNode="stairs">
             <shaderParameter name="colorMat0" value="HORSCH_RED1"/>
+            <shaderParameter name="colorMat2" value="SHARED_BLACK2"/>
+        </material>
+        <material name="vortexPlantHoses_mat" baseNode="hoses">
+            <shaderParameter name="colorMat0" value="SHARED_BLACK2"/>
         </material>
     </baseMaterial>
-    <baseMaterialConfigurations price="1500" useDefaultColors="true" defaultColorIndex="8">
-        <baseMaterialConfiguration name="$l10n_color_ITRUNNER" color="0.0382 0.0369 0.0482 1" material="8"/>
-        <baseMaterialConfiguration name="$l10n_color_EDGEGOLD" color="0.776 0.667 0.341 1" material="3"/>
-        <baseMaterialConfiguration name="$l10n_color_EDGESILVER" color="0.647 0.667 0.682 1" material="3"/>
-        <baseMaterialConfiguration name="$l10n_color_CHROME" color="SHARED_WHITE2" material="2"/>
-        <baseMaterialConfiguration name="$l10n_color_SILVER" color="0.6456 0.6456 0.6456 1" material="8"/>
-        <baseMaterialConfiguration name="$l10n_color_DARKGREY" color="0.037 0.037 0.037 1" material="0"/>
-        <baseMaterialConfiguration name="$l10n_color_DARKBLUECHROME" color="0.007 0.029 0.187 1" material="2"/>
-        <baseMaterialConfiguration name="$l10n_color_ORANGECHROME" color="0.932 0.119 0.000 1" material="2"/>
-        <baseMaterialConfiguration name="$l10n_color_GREENCHROME" color="0.000 0.170 0.001 1" material="2"/>
-        <baseMaterialConfiguration name="$l10n_color_BLUECHROME" color="0.062 0.251 0.612 1" material="2"/>
-        <baseMaterialConfiguration name="$l10n_color_REDCHROME" color="0.673 0.002 0.000 1" material="2"/>
+    <baseMaterialConfigurations price="1500" useDefaultColors="true" defaultColorIndex="12">
+            <!--Matte-->
+		<baseMaterialConfiguration name="$l10n_color_ITRUNNERMATTE" 	    color="0.038 0.037 0.048 1" material="1"/>
+        <baseMaterialConfiguration name="$l10n_color_EDGEGOLDMATTE"         color="0.776 0.667 0.341 1" material="1"/>
+        <baseMaterialConfiguration name="$l10n_color_EDGESILVERMATTE"       color="0.647 0.667 0.682 1" material="1"/>
+		<baseMaterialConfiguration name="$l10n_color_CASEIHMATTE" 	        color="CASEIH_RED1" 		material="1"/>
+		<baseMaterialConfiguration name="$l10n_color_NEWHOLLANDMATTE" 	    color="NEWHOLLAND_BLUE1" 	material="1"/>
+		<baseMaterialConfiguration name="$l10n_color_KRONEMATTE" 	        color="KRONE_GREEN1" 		material="1"/>
+		<baseMaterialConfiguration name="$l10n_color_YELLOWMATTE"           color="0.980 0.980 0.220 1"	material="1"/>
+		<baseMaterialConfiguration name="$l10n_color_STARAMATTE" 	        color="STARA_ORANGE" 		material="1"/>
+
+		<baseMaterialConfiguration name="$l10n_color_LELYMATTE" 		    color="LELY_COPPER" 		material="1"/>
+        <baseMaterialConfiguration name="$l10n_color_KRONEMATTE"            color="KRONE_YELLOW1"       material="1"/>
+        <baseMaterialConfiguration name="$l10n_color_WHITEMATTE"            color="SHARED_WHITE2"       material="1"/>
+		<baseMaterialConfiguration name="$l10n_color_PURPLEMATTE" 	        color="0.630 0.130 0.940 1" material="1"/>
+		<baseMaterialConfiguration name="$l10n_color_DARKBLUEMATTE"         color="0.007 0.029 0.187 1"	material="1"/>
+		<baseMaterialConfiguration name="$l10n_color_JOHNDEEREMATTE" 	    color="JOHNDEERE_GREEN1"    material="1"/>
+		<baseMaterialConfiguration name="$l10n_color_JOHNDEEREMATTE"        color="JOHNDEERE_YELLOW1"	material="1"/>
+		<baseMaterialConfiguration name="$l10n_color_PINKMATTE" 	        color="0.880 0.130 0.540 1" material="1"/>
+            <!--Chrome-->
+        <baseMaterialConfiguration name="$l10n_color_ITRUNNERCHROME" 	    color="0.038 0.037 0.048 1" material="2"/>
+        <baseMaterialConfiguration name="$l10n_color_EDGEGOLDCHROME"        color="0.776 0.667 0.341 1" material="2"/>
+        <baseMaterialConfiguration name="$l10n_color_EDGESILVERCHROME"      color="0.647 0.667 0.682 1" material="2"/>
+		<baseMaterialConfiguration name="$l10n_color_CASEIHCHROME" 	        color="CASEIH_RED1" 		material="2"/>
+		<baseMaterialConfiguration name="$l10n_color_NEWHOLLANDCHROME" 	    color="NEWHOLLAND_BLUE1"    material="2"/>
+		<baseMaterialConfiguration name="$l10n_color_KRONECHROME" 	        color="KRONE_GREEN1" 		material="2"/>
+		<baseMaterialConfiguration name="$l10n_color_YELLOWCHROME"          color="0.980 0.980 0.220 1"	material="2"/>
+		<baseMaterialConfiguration name="$l10n_color_STARACHROME"           color="STARA_ORANGE" 		material="2"/>
+
+		<baseMaterialConfiguration name="$l10n_color_LELYCHROME" 		    color="LELY_COPPER" 		material="2"/>
+		<baseMaterialConfiguration name="$l10n_color_KRONECHROME" 	        color="KRONE_YELLOW1"		material="2"/>
+		<baseMaterialConfiguration name="$l10n_color_WHITECHROME"           color="SHARED_WHITE2" 		material="2"/>
+		<baseMaterialConfiguration name="$l10n_color_PURPLECHROME" 	        color="0.630 0.130 0.940 1" material="2"/>
+		<baseMaterialConfiguration name="$l10n_color_DARKBLUECHROME" 	    color="0.007 0.029 0.187 1" material="2"/>
+		<baseMaterialConfiguration name="$l10n_color_JOHNDEERECHROME"       color="JOHNDEERE_GREEN1" 	material="2"/>
+		<baseMaterialConfiguration name="$l10n_color_JOHNDEERECHROME"       color="JOHNDEERE_YELLOW1"   material="2"/>
+		<baseMaterialConfiguration name="$l10n_color_PINKCHROME"            color="0.880 0.130 0.540 1" material="2"/>
+            <!--Metallic-->
+        <baseMaterialConfiguration name="$l10n_color_ITRUNNERMETALLIC" 	    color="0.038 0.037 0.048 1" material="3"/>
+        <baseMaterialConfiguration name="$l10n_color_EDGEGOLDMETALLIC"      color="0.776 0.667 0.341 1" material="3"/>
+        <baseMaterialConfiguration name="$l10n_color_EDGESILVERMETALLIC"    color="0.647 0.667 0.682 1" material="3"/>
+		<baseMaterialConfiguration name="$l10n_color_CASEIHMETALLIC" 	    color="CASEIH_RED1" 		material="3"/>
+		<baseMaterialConfiguration name="$l10n_color_NEWHOLLANDMETALLIC" 	color="NEWHOLLAND_BLUE1"    material="3"/>
+		<baseMaterialConfiguration name="$l10n_color_KRONEMETALLIC" 	    color="KRONE_GREEN1" 		material="3"/>
+		<baseMaterialConfiguration name="$l10n_color_YELLOWMETALLIC"        color="0.980 0.980 0.220 1"	material="3"/>
+		<baseMaterialConfiguration name="$l10n_color_STARAMETALLIC"         color="STARA_ORANGE" 		material="3"/>
+
+		<baseMaterialConfiguration name="$l10n_color_LELYMETALLIC" 		    color="LELY_COPPER" 		material="3"/>
+		<baseMaterialConfiguration name="$l10n_color_KRONEMETALLIC" 	    color="KRONE_YELLOW1"		material="3"/>
+		<baseMaterialConfiguration name="$l10n_color_WHITEMETALLIC"         color="SHARED_WHITE2" 		material="3"/>
+		<baseMaterialConfiguration name="$l10n_color_PURPLEMETALLIC" 	    color="0.630 0.130 0.940 1" material="3"/>
+		<baseMaterialConfiguration name="$l10n_color_DARKBLUEMETALLIC" 	    color="0.007 0.029 0.187 1" material="3"/>
+		<baseMaterialConfiguration name="$l10n_color_JOHNDEEREMETALLIC"     color="JOHNDEERE_GREEN1" 	material="3"/>
+		<baseMaterialConfiguration name="$l10n_color_JOHNDEEREMETALLIC"     color="JOHNDEERE_YELLOW1"   material="3"/>
+		<baseMaterialConfiguration name="$l10n_color_PINKMETALLIC"          color="0.880 0.130 0.540 1" material="3"/>
+            <!--Default-->
+        <baseMaterialConfiguration name="$l10n_color_ITRUNNER"              color="0.038 0.037 0.048 1" material="0"/>
+        <baseMaterialConfiguration name="$l10n_color_EDGEGOLD"              color="0.776 0.667 0.341 1" material="0"/>
+        <baseMaterialConfiguration name="$l10n_color_EDGESILVER"            color="0.647 0.667 0.682 1" material="0"/>
+        <baseMaterialConfiguration name="$l10n_color_RED"                   color="0.673 0.002 0.000 1" material="0"/>
+		<baseMaterialConfiguration name="$l10n_color_KOBALT" 		        color="DFM_DARKBLUE1" 		material="0"/>
+        <baseMaterialConfiguration name="$l10n_color_GREEN"                 color="0.000 0.170 0.001 1" material="0"/>
+		<baseMaterialConfiguration name="$l10n_color_YELLOW"       	        color="0.980 0.980 0.220 1"	material="0"/>
+        <baseMaterialConfiguration name="$l10n_color_ORANGE"                color="0.932 0.119 0.000 1" material="0"/>
+
+        <baseMaterialConfiguration name="$l10n_color_LELY"       		    color="LELY_COPPER" 		material="0"/>
+		<baseMaterialConfiguration name="$l10n_color_KRONE" 		        color="KRONE_YELLOW1" 		material="0"/>
+		<baseMaterialConfiguration name="$l10n_color_ROMANSILVER" 			color="0.510 0.540 0.590 1" material="0"/>
+		<baseMaterialConfiguration name="$l10n_color_PURPLE"           	    color="0.630 0.130 0.940 1" material="0"/>
+        <baseMaterialConfiguration name="$l10n_color_DARKBLUE"              color="0.007 0.029 0.187 1" material="0"/>
+		<baseMaterialConfiguration name="$l10n_color_KRONE" 		        color="KRONE_GREEN1" 		material="0"/>
+		<baseMaterialConfiguration name="$l10n_color_NEWHOLLAND" 	        color="NEWHOLLAND_YELLOW1" 	material="0"/>
+        <baseMaterialConfiguration name="$l10n_color_PINK"                  color="0.880 0.130 0.540 1" material="0"/>
+            <!--Mix-->
+        <baseMaterialConfiguration name="$l10n_color_DARKGREY"              color="0.037 0.037 0.037 1" material="0"/>
+		<baseMaterialConfiguration name="$l10n_color_BROWN" 		        color="SHARED_BROWN1" 		material="0"/>
+        <baseMaterialConfiguration name="$l10n_color_ALICEBLUE"             color="0.940 0.970 1.000 1" material="0"/>
+        <baseMaterialConfiguration name="$l10n_color_CRIMSONGLORY"          color="0.690 0.000 0.160 1" material="0"/>
+		<baseMaterialConfiguration name="$l10n_color_CYAN" 			        color="KOMATSU_CYAN" 		material="0"/>
+        <baseMaterialConfiguration name="$l10n_color_ANDROIDGREEN"          color="0.640 0.780 0.220 1" material="0"/>
+		<baseMaterialConfiguration name="$l10n_color_CORN" 		            color="1.000 0.900 0.400 1" material="0"/>
+		<baseMaterialConfiguration name="$l10n_color_AMBER" 		        color="1.000 0.750 0.000 1" material="0"/>
         <material name="vortexPlant_mat" shaderParameter="colorMat0"/>
-        <material name="sW12000_mat" shaderParameter="colorMat0"/>
+        <material name="horchVortex_mat" shaderParameter="colorMat0"/>
+        <material name="horchVortexTransparent01_mat" shaderParameter="colorMat0"/>
+        <material name="vortexPlantStairsTransparent_mat" shaderParameter="colorMat0"/>
+        <material name="vortexPlantStairs_mat" shaderParameter="colorMat0"/>
+        <material name="vortexPlant_mat" shaderParameter="colorMat1"/>
     </baseMaterialConfigurations>
-    <designMaterialConfigurations price="1000" useDefaultColors="true" defaultColorIndex="0">
-        <designMaterialConfiguration name="$l10n_color_EDGEGOLD" color="0.776 0.667 0.341 3" material="3"/>
-        <designMaterialConfiguration name="$l10n_color_DARKGREY" color="0.037 0.037 0.037 1" material="0"/>
-        <designMaterialConfiguration name="$l10n_color_EDGESILVER" color="0.647 0.667 0.682 9" material="3"/>
-        <designMaterialConfiguration name="$l10n_color_CHROME" color="SHARED_WHITE2" material="2"/>
-        <designMaterialConfiguration name="$l10n_color_ITRUNNER" color="0.0382 0.0369 0.0482 1" material="8"/>
-        <designMaterialConfiguration name="$l10n_color_SILVER" color="0.6456 0.6456 0.6456 1" material="8"/>
-        <designMaterialConfiguration name="$l10n_color_DARKBLUECHROME" color="0.007 0.029 0.187 1" material="3"/>
-        <designMaterialConfiguration name="$l10n_color_ORANGECHROME" color="0.932 0.119 0.000 1" material="3"/>
-        <designMaterialConfiguration name="$l10n_color_GREENCHROME" color="0.000 0.170 0.001 1" material="3"/>
-        <designMaterialConfiguration name="$l10n_color_BLUECHROME" color="0.062 0.251 0.612 1" material="3"/>
-        <designMaterialConfiguration name="$l10n_color_REDCHROME" color="0.673 0.002 0.000 1" material="3"/>
-        <material name="valtraX520_mat" shaderParameter="colorMat4"/>
-        <material name="grid_mat" shaderParameter="colorMat1"/>
+    <designMaterialConfigurations price="1000" useDefaultColors="true" defaultColorIndex="8">
+            <!--Matte-->
+		<designMaterialConfiguration name="$l10n_color_ITRUNNERMATTE" 	      color="0.038 0.037 0.048 1" material="1"/>
+        <designMaterialConfiguration name="$l10n_color_EDGEGOLDMATTE"         color="0.776 0.667 0.341 1" material="1"/>
+        <designMaterialConfiguration name="$l10n_color_EDGESILVERMATTE"       color="0.647 0.667 0.682 1" material="1"/>
+		<designMaterialConfiguration name="$l10n_color_CASEIHMATTE" 	      color="CASEIH_RED1" 		material="1"/>
+		<designMaterialConfiguration name="$l10n_color_NEWHOLLANDMATTE" 	  color="NEWHOLLAND_BLUE1" 	material="1"/>
+		<designMaterialConfiguration name="$l10n_color_KRONEMATTE" 	          color="KRONE_GREEN1" 		material="1"/>
+		<designMaterialConfiguration name="$l10n_color_YELLOWMATTE"           color="0.980 0.980 0.220 1"	material="1"/>
+		<designMaterialConfiguration name="$l10n_color_STARAMATTE" 	          color="STARA_ORANGE" 		material="1"/>
+
+		<designMaterialConfiguration name="$l10n_color_LELYMATTE" 		      color="LELY_COPPER" 		material="1"/>
+        <designMaterialConfiguration name="$l10n_color_KRONEMATTE"            color="KRONE_YELLOW1"       material="1"/>
+        <designMaterialConfiguration name="$l10n_color_WHITEMATTE"            color="SHARED_WHITE2"       material="1"/>
+		<designMaterialConfiguration name="$l10n_color_PURPLEMATTE" 	      color="0.630 0.130 0.940 1" material="1"/>
+		<designMaterialConfiguration name="$l10n_color_DARKBLUEMATTE"         color="0.007 0.029 0.187 1"	material="1"/>
+		<designMaterialConfiguration name="$l10n_color_JOHNDEEREMATTE" 	      color="JOHNDEERE_GREEN1"    material="1"/>
+		<designMaterialConfiguration name="$l10n_color_JOHNDEEREMATTE"        color="JOHNDEERE_YELLOW1"	material="1"/>
+		<designMaterialConfiguration name="$l10n_color_PINKMATTE" 	          color="0.880 0.130 0.540 1" material="1"/>
+            <!--Chrome-->
+        <designMaterialConfiguration name="$l10n_color_ITRUNNERCHROME" 	      color="0.038 0.037 0.048 1" material="2"/>
+        <designMaterialConfiguration name="$l10n_color_EDGEGOLDCHROME"        color="0.776 0.667 0.341 1" material="2"/>
+        <designMaterialConfiguration name="$l10n_color_EDGESILVERCHROME"      color="0.647 0.667 0.682 1" material="2"/>
+		<designMaterialConfiguration name="$l10n_color_CASEIHCHROME" 	      color="CASEIH_RED1" 		material="2"/>
+		<designMaterialConfiguration name="$l10n_color_NEWHOLLANDCHROME" 	  color="NEWHOLLAND_BLUE1"    material="2"/>
+		<designMaterialConfiguration name="$l10n_color_KRONECHROME" 	      color="KRONE_GREEN1" 		material="2"/>
+		<designMaterialConfiguration name="$l10n_color_YELLOWCHROME"          color="0.980 0.980 0.220 1"	material="2"/>
+		<designMaterialConfiguration name="$l10n_color_STARACHROME"           color="STARA_ORANGE" 		material="2"/>
+
+		<designMaterialConfiguration name="$l10n_color_LELYCHROME" 		      color="LELY_COPPER" 		material="2"/>
+		<designMaterialConfiguration name="$l10n_color_KRONECHROME" 	      color="KRONE_YELLOW1"		material="2"/>
+		<designMaterialConfiguration name="$l10n_color_WHITECHROME"           color="SHARED_WHITE2" 		material="2"/>
+		<designMaterialConfiguration name="$l10n_color_PURPLECHROME" 	      color="0.630 0.130 0.940 1" material="2"/>
+		<designMaterialConfiguration name="$l10n_color_DARKBLUECHROME" 	      color="0.007 0.029 0.187 1" material="2"/>
+		<designMaterialConfiguration name="$l10n_color_JOHNDEERECHROME"       color="JOHNDEERE_GREEN1" 	material="2"/>
+		<designMaterialConfiguration name="$l10n_color_JOHNDEERECHROME"       color="JOHNDEERE_YELLOW1"   material="2"/>
+		<designMaterialConfiguration name="$l10n_color_PINKCHROME"            color="0.880 0.130 0.540 1" material="2"/>
+            <!--Metallic-->
+        <designMaterialConfiguration name="$l10n_color_ITRUNNERMETALLIC" 	  color="0.038 0.037 0.048 1" material="3"/>
+        <designMaterialConfiguration name="$l10n_color_EDGEGOLDMETALLIC"      color="0.776 0.667 0.341 1" material="3"/>
+        <designMaterialConfiguration name="$l10n_color_EDGESILVERMETALLIC"    color="0.647 0.667 0.682 1" material="3"/>
+		<designMaterialConfiguration name="$l10n_color_CASEIHMETALLIC" 	      color="CASEIH_RED1" 		material="3"/>
+		<designMaterialConfiguration name="$l10n_color_NEWHOLLANDMETALLIC" 	  color="NEWHOLLAND_BLUE1"    material="3"/>
+		<designMaterialConfiguration name="$l10n_color_KRONEMETALLIC" 	      color="KRONE_GREEN1" 		material="3"/>
+		<designMaterialConfiguration name="$l10n_color_YELLOWMETALLIC"        color="0.980 0.980 0.220 1"	material="3"/>
+		<designMaterialConfiguration name="$l10n_color_STARAMETALLIC"         color="STARA_ORANGE" 		material="3"/>
+
+		<designMaterialConfiguration name="$l10n_color_LELYMETALLIC" 		  color="LELY_COPPER" 		material="3"/>
+		<designMaterialConfiguration name="$l10n_color_KRONEMETALLIC" 	      color="KRONE_YELLOW1"		material="3"/>
+		<designMaterialConfiguration name="$l10n_color_WHITEMETALLIC"         color="SHARED_WHITE2" 		material="3"/>
+		<designMaterialConfiguration name="$l10n_color_PURPLEMETALLIC" 	      color="0.630 0.130 0.940 1" material="3"/>
+		<designMaterialConfiguration name="$l10n_color_DARKBLUEMETALLIC" 	  color="0.007 0.029 0.187 1" material="3"/>
+		<designMaterialConfiguration name="$l10n_color_JOHNDEEREMETALLIC"     color="JOHNDEERE_GREEN1" 	material="3"/>
+		<designMaterialConfiguration name="$l10n_color_JOHNDEEREMETALLIC"     color="JOHNDEERE_YELLOW1"   material="3"/>
+		<designMaterialConfiguration name="$l10n_color_PINKMETALLIC"          color="0.880 0.130 0.540 1" material="3"/>
+            <!--Default-->
+        <designMaterialConfiguration name="$l10n_color_ITRUNNER"        color="0.038 0.037 0.048 1" material="0"/>
+        <designMaterialConfiguration name="$l10n_color_EDGEGOLD"        color="0.776 0.667 0.341 1" material="0"/>
+        <designMaterialConfiguration name="$l10n_color_EDGESILVER"      color="0.647 0.667 0.682 1" material="0"/>
+        <designMaterialConfiguration name="$l10n_color_RED"             color="0.673 0.002 0.000 1" material="0"/>
+		<designMaterialConfiguration name="$l10n_color_KOBALT" 		    color="DFM_DARKBLUE1" 		material="0"/>
+        <designMaterialConfiguration name="$l10n_color_GREEN"           color="0.000 0.170 0.001 1" material="0"/>
+		<designMaterialConfiguration name="$l10n_color_YELLOW"       	color="0.980 0.980 0.220 1"	material="0"/>
+        <designMaterialConfiguration name="$l10n_color_ORANGE"          color="0.932 0.119 0.000 1" material="0"/>
+
+        <designMaterialConfiguration name="$l10n_color_LELY"       		color="LELY_COPPER" 		material="0"/>
+		<designMaterialConfiguration name="$l10n_color_KRONE" 		    color="KRONE_YELLOW1" 		material="0"/>
+		<designMaterialConfiguration name="$l10n_color_ROMANSILVER" 	color="0.510 0.540 0.590 1" material="0"/>
+		<designMaterialConfiguration name="$l10n_color_PURPLE"          color="0.630 0.130 0.940 1" material="0"/>
+        <designMaterialConfiguration name="$l10n_color_DARKBLUE"        color="0.007 0.029 0.187 1" material="0"/>
+		<designMaterialConfiguration name="$l10n_color_KRONE" 		    color="KRONE_GREEN1" 		material="0"/>
+		<designMaterialConfiguration name="$l10n_color_NEWHOLLAND" 	    color="NEWHOLLAND_YELLOW1" 	material="0"/>
+        <designMaterialConfiguration name="$l10n_color_PINK"            color="0.880 0.130 0.540 1" material="0"/>
+            <!--Mix-->
+        <designMaterialConfiguration name="$l10n_color_DARKGREY"        color="0.037 0.037 0.037 1" material="0"/>
+		<designMaterialConfiguration name="$l10n_color_BROWN" 		    color="SHARED_BROWN1" 		material="0"/>
+        <designMaterialConfiguration name="$l10n_color_CRIMSONGLORY"    color="0.690 0.000 0.160 1" material="0"/>
+        <designMaterialConfiguration name="$l10n_color_ALICEBLUE"       color="0.940 0.970 1.000 1" material="0"/>
+		<designMaterialConfiguration name="$l10n_color_CYAN" 			color="KOMATSU_CYAN" 		material="0"/>
+        <designMaterialConfiguration name="$l10n_color_ANDROIDGREEN"    color="0.690 0.750 0.100 1" material="0"/>
+		<designMaterialConfiguration name="$l10n_color_CORN" 		    color="1.000 0.900 0.400 1" material="0"/>
+		<designMaterialConfiguration name="$l10n_color_AMBER" 		    color="1.000 0.750 0.000 1" material="0"/>
+        <material name="vortexPlant_mat" shaderParameter="colorMat2"/>
+        <material name="horchVortex_mat" shaderParameter="colorMat2"/>
+        <material name="horchVortexTransparent01_mat" shaderParameter="colorMa2"/>
+        <material name="vortexPlantStairsTransparent_mat" shaderParameter="colorMa2"/>
+        <material name="vortexPlantStairs_mat" shaderParameter="colorMat2"/>
+        <material name="vortexPlantHoses_mat" shaderParameter="colorMat0"/>
     </designMaterialConfigurations>
     <rimColorConfigurations useDefaultColors="true" price="300" defaultColorIndex="12">
-        <rimColorConfiguration name="$l10n_color_EDGEGOLD" color="0.776 0.667 0.341 3" material="3"/>
-        <rimColorConfiguration name="$l10n_color_DARKGREY" color="0.037 0.037 0.037 1" material="0"/>
-        <rimColorConfiguration name="$l10n_color_EDGESILVER" color="0.647 0.667 0.682 9" material="3"/>
-        <rimColorConfiguration name="$l10n_color_CHROME" color="SHARED_WHITE2" material="2"/>
-        <rimColorConfiguration name="$l10n_color_ITRUNNER" color="0.0382 0.0369 0.0482 1" material="8"/>
-        <rimColorConfiguration name="$l10n_color_SILVER" color="0.6456 0.6456 0.6456 1" material="8"/>
-        <rimColorConfiguration name="$l10n_color_DARKBLUECHROME" color="0.007 0.029 0.187 1" material="3"/>
-        <rimColorConfiguration name="$l10n_color_ORANGECHROME" color="0.932 0.119 0.000 1" material="3"/>
-        <rimColorConfiguration name="$l10n_color_GREENCHROME" color="0.000 0.170 0.001 1" material="3"/>
-        <rimColorConfiguration name="$l10n_color_BLUECHROME" color="0.062 0.251 0.612 1" material="3"/>
-        <rimColorConfiguration name="$l10n_color_REDCHROME" color="0.673 0.002 0.000 1" material="3"/>
+            <!--Matte-->
+		<rimColorConfiguration name="$l10n_color_ITRUNNERMATTE" 	    color="0.038 0.037 0.048 1" material="1"/>
+        <rimColorConfiguration name="$l10n_color_EDGEGOLDMATTE"         color="0.776 0.667 0.341 1" material="1"/>
+        <rimColorConfiguration name="$l10n_color_EDGESILVERMATTE"       color="0.647 0.667 0.682 1" material="1"/>
+		<rimColorConfiguration name="$l10n_color_CASEIHMATTE" 	        color="CASEIH_RED1" 		material="1"/>
+		<rimColorConfiguration name="$l10n_color_NEWHOLLANDMATTE" 	    color="NEWHOLLAND_BLUE1" 	material="1"/>
+		<rimColorConfiguration name="$l10n_color_KRONEMATTE" 	        color="KRONE_GREEN1" 		material="1"/>
+		<rimColorConfiguration name="$l10n_color_YELLOWMATTE"           color="0.980 0.980 0.220 1"	material="1"/>
+		<rimColorConfiguration name="$l10n_color_STARAMATTE" 	        color="STARA_ORANGE" 		material="1"/>
+
+		<rimColorConfiguration name="$l10n_color_LELYMATTE" 		    color="LELY_COPPER" 		material="1"/>
+        <rimColorConfiguration name="$l10n_color_KRONEMATTE"            color="KRONE_YELLOW1"       material="1"/>
+        <rimColorConfiguration name="$l10n_color_WHITEMATTE"            color="SHARED_WHITE2"       material="1"/>
+		<rimColorConfiguration name="$l10n_color_PURPLEMATTE" 	        color="0.630 0.130 0.940 1" material="1"/>
+		<rimColorConfiguration name="$l10n_color_DARKBLUEMATTE"         color="0.007 0.029 0.187 1"	material="1"/>
+		<rimColorConfiguration name="$l10n_color_JOHNDEEREMATTE" 	    color="JOHNDEERE_GREEN1"    material="1"/>
+		<rimColorConfiguration name="$l10n_color_JOHNDEEREMATTE"        color="JOHNDEERE_YELLOW1"	material="1"/>
+		<rimColorConfiguration name="$l10n_color_PINKMATTE" 	        color="0.880 0.130 0.540 1" material="1"/>
+            <!--Chrome-->
+        <rimColorConfiguration name="$l10n_color_ITRUNNERCHROME" 	    color="0.038 0.037 0.048 1" material="2"/>
+        <rimColorConfiguration name="$l10n_color_EDGEGOLDCHROME"        color="0.776 0.667 0.341 1" material="2"/>
+        <rimColorConfiguration name="$l10n_color_EDGESILVERCHROME"      color="0.647 0.667 0.682 1" material="2"/>
+		<rimColorConfiguration name="$l10n_color_CASEIHCHROME" 	        color="CASEIH_RED1" 		material="2"/>
+		<rimColorConfiguration name="$l10n_color_NEWHOLLANDCHROME" 	    color="NEWHOLLAND_BLUE1"    material="2"/>
+		<rimColorConfiguration name="$l10n_color_KRONECHROME" 	        color="KRONE_GREEN1" 		material="2"/>
+		<rimColorConfiguration name="$l10n_color_YELLOWCHROME"          color="0.980 0.980 0.220 1"	material="2"/>
+		<rimColorConfiguration name="$l10n_color_STARACHROME"           color="STARA_ORANGE" 		material="2"/>
+
+		<rimColorConfiguration name="$l10n_color_LELYCHROME" 		    color="LELY_COPPER" 		material="2"/>
+		<rimColorConfiguration name="$l10n_color_KRONECHROME" 	        color="KRONE_YELLOW1"		material="2"/>
+		<rimColorConfiguration name="$l10n_color_WHITECHROME"           color="SHARED_WHITE2" 		material="2"/>
+		<rimColorConfiguration name="$l10n_color_PURPLECHROME" 	        color="0.630 0.130 0.940 1" material="2"/>
+		<rimColorConfiguration name="$l10n_color_DARKBLUECHROME" 	    color="0.007 0.029 0.187 1" material="2"/>
+		<rimColorConfiguration name="$l10n_color_JOHNDEERECHROME"       color="JOHNDEERE_GREEN1" 	material="2"/>
+		<rimColorConfiguration name="$l10n_color_JOHNDEERECHROME"       color="JOHNDEERE_YELLOW1"   material="2"/>
+		<rimColorConfiguration name="$l10n_color_PINKCHROME"            color="0.880 0.130 0.540 1" material="2"/>
+            <!--Metallic-->
+        <rimColorConfiguration name="$l10n_color_ITRUNNERMETALLIC" 	    color="0.038 0.037 0.048 1" material="3"/>
+        <rimColorConfiguration name="$l10n_color_EDGEGOLDMETALLIC"      color="0.776 0.667 0.341 1" material="3"/>
+        <rimColorConfiguration name="$l10n_color_EDGESILVERMETALLIC"    color="0.647 0.667 0.682 1" material="3"/>
+		<rimColorConfiguration name="$l10n_color_CASEIHMETALLIC" 	    color="CASEIH_RED1" 		material="3"/>
+		<rimColorConfiguration name="$l10n_color_NEWHOLLANDMETALLIC" 	color="NEWHOLLAND_BLUE1"    material="3"/>
+		<rimColorConfiguration name="$l10n_color_KRONEMETALLIC" 	    color="KRONE_GREEN1" 		material="3"/>
+		<rimColorConfiguration name="$l10n_color_YELLOWMETALLIC"        color="0.980 0.980 0.220 1"	material="3"/>
+		<rimColorConfiguration name="$l10n_color_STARAMETALLIC"         color="STARA_ORANGE" 		material="3"/>
+
+		<rimColorConfiguration name="$l10n_color_LELYMETALLIC" 		    color="LELY_COPPER" 		material="3"/>
+		<rimColorConfiguration name="$l10n_color_KRONEMETALLIC" 	    color="KRONE_YELLOW1"		material="3"/>
+		<rimColorConfiguration name="$l10n_color_WHITEMETALLIC"         color="SHARED_WHITE2" 		material="3"/>
+		<rimColorConfiguration name="$l10n_color_PURPLEMETALLIC" 	    color="0.630 0.130 0.940 1" material="3"/>
+		<rimColorConfiguration name="$l10n_color_DARKBLUEMETALLIC" 	    color="0.007 0.029 0.187 1" material="3"/>
+		<rimColorConfiguration name="$l10n_color_JOHNDEEREMETALLIC"     color="JOHNDEERE_GREEN1" 	material="3"/>
+		<rimColorConfiguration name="$l10n_color_JOHNDEEREMETALLIC"     color="JOHNDEERE_YELLOW1"   material="3"/>
+		<rimColorConfiguration name="$l10n_color_PINKMETALLIC"          color="0.880 0.130 0.540 1" material="3"/>
+            <!--Default-->
+        <rimColorConfiguration name="$l10n_color_ITRUNNER"              color="0.038 0.037 0.048 1" material="0"/>
+        <rimColorConfiguration name="$l10n_color_EDGEGOLD"              color="0.776 0.667 0.341 1" material="0"/>
+        <rimColorConfiguration name="$l10n_color_EDGESILVER"            color="0.647 0.667 0.682 1" material="0"/>
+        <rimColorConfiguration name="$l10n_color_RED"                   color="0.673 0.002 0.000 1" material="0"/>
+		<rimColorConfiguration name="$l10n_color_KOBALT" 		        color="DFM_DARKBLUE1" 		material="0"/>
+        <rimColorConfiguration name="$l10n_color_GREEN"                 color="0.000 0.170 0.001 1" material="0"/>
+		<rimColorConfiguration name="$l10n_color_YELLOW"       	        color="0.980 0.980 0.220 1"	material="0"/>
+        <rimColorConfiguration name="$l10n_color_ORANGE"                color="0.932 0.119 0.000 1" material="0"/>
+
+        <rimColorConfiguration name="$l10n_color_LELY"       		    color="LELY_COPPER" 		material="0"/>
+		<rimColorConfiguration name="$l10n_color_KRONE" 		        color="KRONE_YELLOW1" 		material="0"/>
+		<rimColorConfiguration name="$l10n_color_ROMANSILVER" 			color="0.510 0.540 0.590 1" material="0"/>
+		<rimColorConfiguration name="$l10n_color_PURPLE"           	    color="0.630 0.130 0.940 1" material="0"/>
+        <rimColorConfiguration name="$l10n_color_DARKBLUE"              color="0.007 0.029 0.187 1" material="0"/>
+		<rimColorConfiguration name="$l10n_color_KRONE" 		        color="KRONE_GREEN1" 		material="0"/>
+		<rimColorConfiguration name="$l10n_color_NEWHOLLAND" 	        color="NEWHOLLAND_YELLOW1" 	material="0"/>
+        <rimColorConfiguration name="$l10n_color_PINK"                  color="0.880 0.130 0.540 1" material="0"/>
+            <!--Mix-->
+        <rimColorConfiguration name="$l10n_color_DARKGREY"              color="0.037 0.037 0.037 1" material="0"/>
+		<rimColorConfiguration name="$l10n_color_BROWN" 		        color="SHARED_BROWN1" 		material="0"/>
+        <rimColorConfiguration name="$l10n_color_CRIMSONGLORY"          color="0.690 0.000 0.160 1" material="0"/>
+        <rimColorConfiguration name="$l10n_color_ALICEBLUE"             color="0.940 0.970 1.000 1" material="0"/>
+		<rimColorConfiguration name="$l10n_color_CYAN" 			        color="KOMATSU_CYAN" 		material="0"/>
+        <rimColorConfiguration name="$l10n_color_ANDROIDGREEN"          color="0.690 0.750 0.100 1" material="0"/>
+		<rimColorConfiguration name="$l10n_color_CORN" 		            color="1.000 0.900 0.400 1" material="0"/>
+		<rimColorConfiguration name="$l10n_color_AMBER" 		        color="1.000 0.750 0.000 1" material="0"/>
     </rimColorConfigurations>
 
     <i3dMappings>

@@ -3,11 +3,11 @@
 <i3D name="vortexShuttle" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
 
   <Files>
-    <File fileId="1" filename="vortexShuttle_normal.png" />
-    <File fileId="4" filename="vortexShuttleDecal_diffuse.png" />
-    <File fileId="5" filename="vortexShuttleBolts_diffuse.png" />
-    <File fileId="6" filename="vortexShuttleBolts_normal.png" />
-    <File fileId="2" filename="vortexShuttle_specular.png" />
+    <File fileId="1" filename="textures/vortexShuttle_normal.png" />
+    <File fileId="4" filename="textures/vortexShuttleDecal_diffuse.png" />
+    <File fileId="5" filename="textures/vortexShuttleBolts_diffuse.png" />
+    <File fileId="6" filename="textures/vortexShuttleBolts_normal.png" />
+    <File fileId="2" filename="textures/vortexShuttle_specular.png" />
     <File fileId="7" filename="$data/shared/default_normal.png" />
     <File fileId="10" filename="$data/vehicles/stoll/stollFrontLoaderFZDecal_diffuse.png" />
     <File fileId="8" filename="$data/vehicles/stoll/stollFrontLoaderImplements_normal.png" />
