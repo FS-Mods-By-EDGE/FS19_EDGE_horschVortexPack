@@ -9,6 +9,7 @@
             <combination>$l10n_combo_vortexShuttle</combination>
         </specs>
         <functions>
+            <function>$l10n_function_vortexPlant</function>
             <function>$l10n_function_sowingMachine</function>
             <function>$l10n_function_sowingMachineDirect</function>
         </functions>
@@ -23,7 +24,7 @@
 
     <base>
         <typeDesc>$l10n_typeDesc_sowingMachine</typeDesc>
-        <filename>data/vortexPlant.i3d</filename>
+        <filename>data/vortex.i3d</filename>
         <size width="5.5" length="13"/>
         <speedLimit value="18"/>
         <components>
@@ -572,7 +573,7 @@
     </foliageBending>
 
     <baseMaterial>
-        <material name="vortexPlant_mat" baseNode="horschEvo_vis">
+        <material name="vortex_mat" baseNode="horschEvo_vis">
             <shaderParameter name="colorMat0" value="HORSCH_RED1"/>
             <shaderParameter name="colorMat2" value="SHARED_BLACK2"/>
             <shaderParameter name="colorMat1" value="SHARED_BLACK2"/>
@@ -585,15 +586,15 @@
             <shaderParameter name="colorMat0" value="HORSCH_RED1"/>
             <shaderParameter name="colorMat2" value="SHARED_BLACK2"/>
         </material>
-        <material name="vortexPlantStairsTransparent_mat" baseNode="transparent">
+        <material name="vortexStairsTransparent_mat" baseNode="transparent">
             <shaderParameter name="colorMat0" value="HORSCH_RED1"/>
             <shaderParameter name="colorMat2" value="SHARED_BLACK2"/>
         </material>
-        <material name="vortexPlantStairs_mat" baseNode="stairs">
+        <material name="vortexStairs_mat" baseNode="stairs">
             <shaderParameter name="colorMat0" value="HORSCH_RED1"/>
             <shaderParameter name="colorMat2" value="SHARED_BLACK2"/>
         </material>
-        <material name="vortexPlantHoses_mat" baseNode="hoses">
+        <material name="vortexHoses_mat" baseNode="hoses">
             <shaderParameter name="colorMat0" value="SHARED_BLACK2"/>
         </material>
     </baseMaterial>
@@ -679,12 +680,12 @@
         <baseMaterialConfiguration name="$l10n_color_ANDROIDGREEN"          color="0.640 0.780 0.220 1" material="0"/>
 		<baseMaterialConfiguration name="$l10n_color_CORN" 		            color="1.000 0.900 0.400 1" material="0"/>
 		<baseMaterialConfiguration name="$l10n_color_AMBER" 		        color="1.000 0.750 0.000 1" material="0"/>
-        <material name="vortexPlant_mat" shaderParameter="colorMat0"/>
+        <material name="vortex_mat" shaderParameter="colorMat0"/>
         <material name="horchVortex_mat" shaderParameter="colorMat0"/>
         <material name="horchVortexTransparent01_mat" shaderParameter="colorMat0"/>
-        <material name="vortexPlantStairsTransparent_mat" shaderParameter="colorMat0"/>
-        <material name="vortexPlantStairs_mat" shaderParameter="colorMat0"/>
-        <material name="vortexPlant_mat" shaderParameter="colorMat1"/>
+        <material name="vortexStairsTransparent_mat" shaderParameter="colorMat0"/>
+        <material name="vortexStairs_mat" shaderParameter="colorMat0"/>
+        <material name="vortex_mat" shaderParameter="colorMat1"/>
     </baseMaterialConfigurations>
     <designMaterialConfigurations price="1000" useDefaultColors="true" defaultColorIndex="8">
             <!--Matte-->
@@ -768,12 +769,12 @@
         <designMaterialConfiguration name="$l10n_color_ANDROIDGREEN"    color="0.690 0.750 0.100 1" material="0"/>
 		<designMaterialConfiguration name="$l10n_color_CORN" 		    color="1.000 0.900 0.400 1" material="0"/>
 		<designMaterialConfiguration name="$l10n_color_AMBER" 		    color="1.000 0.750 0.000 1" material="0"/>
-        <material name="vortexPlant_mat" shaderParameter="colorMat2"/>
+        <material name="vortex_mat" shaderParameter="colorMat2"/>
         <material name="horchVortex_mat" shaderParameter="colorMat2"/>
         <material name="horchVortexTransparent01_mat" shaderParameter="colorMa2"/>
-        <material name="vortexPlantStairsTransparent_mat" shaderParameter="colorMa2"/>
-        <material name="vortexPlantStairs_mat" shaderParameter="colorMat2"/>
-        <material name="vortexPlantHoses_mat" shaderParameter="colorMat0"/>
+        <material name="vortexStairsTransparent_mat" shaderParameter="colorMa2"/>
+        <material name="vortexStairs_mat" shaderParameter="colorMat2"/>
+        <material name="vortexHoses_mat" shaderParameter="colorMat0"/>
     </designMaterialConfigurations>
     <rimColorConfigurations useDefaultColors="true" price="300" defaultColorIndex="12">
             <!--Matte-->

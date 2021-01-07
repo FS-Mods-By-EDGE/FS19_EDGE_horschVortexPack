@@ -3,9 +3,10 @@
     <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
 
     <storeData>
-        <name>Shuttle 2.000</name>
+        <name>$l10n_name_vortexShuttle</name>
         <functions>
-            <function>$l10n_function_augerWagon</function>
+            <function>$l10n_function_vortexShuttle</function>
+            <function>$l10n_function_additionalTank</function>
         </functions>
         <image>horsch/eveShuttle/store_vortexShuttle.png</image>
         <price>8000</price>
@@ -17,7 +18,7 @@
 
     <base>
         <typeDesc>Shuttle 2.000</typeDesc>
-        <filename>horsch/eveShuttle/vortexShuttle.i3d</filename>
+        <filename>data/vortexShuttle.i3d</filename>
         <size width="3.5" length="2.5" lengthOffset="-0.3"/>
         <components>
             <component centerOfMass="0 0.5 0" solverIterationCount="20" mass="500" />

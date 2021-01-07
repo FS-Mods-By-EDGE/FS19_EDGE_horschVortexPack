@@ -3,6 +3,15 @@
 <author>Edge Gaming / Castiga</author>
 <translationby>Castiga</translationby>
 	<texts>
+		<text name="config_5050"				text="50 % Seed / 50 % Fertilizer"/>
+		<text name="config_6040"				text="Vortex Seed Shuttle"/>
+		<text name="config_7030"				text="Tank Size"/>
+		<text name="config_8020"				text="Vortex Seeders"/>
+		<text name="config_seed"				text="Vortex Seed Shuttle"/>
+		<text name="config_4060"				text="Tank Size"/>
+		<text name="config_3070"				text="Vortex Seed Shuttle"/>
+		<text name="config_2080"				text="Tank Size"/>
+		<text name="combo_vortex"				text="Vortex Seeders"/>
 		<text name="combo_vortexShuttle"		text="Vortex Seed Shuttle"/>
 		<text name="configuration_storage"		text="Tank Size"/>
         <text name="configuration_Design"		text="Detail Painted"/>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="47">
+<modDesc descVersion="53">
     <author>Edge Gaming</author>
     <translationsby>Castiga</translationsby>
     <version>1.0.0.0</version>
@@ -154,6 +154,7 @@ o Contatta EDGEPureGaming su Facebook.]]></it>
         <storeItem xmlFilename="data/vortexShuttle.xml"/>
         <storeItem xmlFilename="data/vortexSeed.xml"/>
         <storeItem xmlFilename="data/vortexPlant.xml"/>
+        <storeItem xmlFilename="data/vortexMultiSeed.xml"/>
     </storeItems>
 	<l10n filenamePrefix="modDesc/modDesc_l10n">
 		<text name="function_vortexPlant">
@@ -174,6 +175,24 @@ o Contatta EDGEPureGaming su Facebook.]]></it>
             <pl>Wałki mogą usuwać pola, a także czyścić obszar śladów kół, mogą być również używane do usuwania śniegu.</pl>
             <it>I rulli possono rimuovere i campi e pulire un'area per le piste, possono anche essere usati per rimuovere la neve.</it>
     	</text>
+    	<text name="function_vortexMulti">
+    		<en>Rollers can remove fields as well as cleaning an area for wheel tracks, they can also be used to remove snow.</en>
+    		<de>Walzen können Felder entfernen und einen Bereich für Radspuren reinigen, Sie können auch zum Entfernen von Schnee verwendet werden.</de>
+    		<fr>Les rouleaux peuvent enlever les champs et nettoyer une zone pour les tracs de roues, ils peuvent également être utilisés pour enlever la neige.</fr>
+            <es>Los rodillos pueden eliminar campos, así como limpiar un área para los tracs de ruedas, También se pueden utilizar para quitar la nieve.</es>
+            <ru>Ролики могут удалить поля, а также очистить область для колесных дорожек, они также могут быть использованы для удаления снега.</ru>
+            <pl>Wałki mogą usuwać pola, a także czyścić obszar śladów kół, mogą być również używane do usuwania śniegu.</pl>
+            <it>I rulli possono rimuovere i campi e pulire un'area per le piste, possono anche essere usati per rimuovere la neve.</it>
+    	</text>
+    	<text name="function_vortexShuttle">
+    		<en>Rollers can remove fields as well as cleaning an area for wheel tracks, they can also be used to remove snow.</en>
+    		<de>Walzen können Felder entfernen und einen Bereich für Radspuren reinigen, Sie können auch zum Entfernen von Schnee verwendet werden.</de>
+    		<fr>Les rouleaux peuvent enlever les champs et nettoyer une zone pour les tracs de roues, ils peuvent également être utilisés pour enlever la neige.</fr>
+            <es>Los rodillos pueden eliminar campos, así como limpiar un área para los tracs de ruedas, También se pueden utilizar para quitar la nieve.</es>
+            <ru>Ролики могут удалить поля, а также очистить область для колесных дорожек, они также могут быть использованы для удаления снега.</ru>
+            <pl>Wałki mogą usuwać pola, a także czyścić obszar śladów kół, mogą być również używane do usuwania śniegu.</pl>
+            <it>I rulli possono rimuovere i campi e pulire un'area per le piste, possono anche essere usati per rimuovere la neve.</it>
+    	</text>
 		<text name="name_vortexSeed">
 			<en>Vortex S1</en>
 			<de>Feldwalze</de>
@@ -185,6 +204,24 @@ o Contatta EDGEPureGaming su Facebook.]]></it>
 		</text>
 		<text name="name_vortexPlant">
 			<en>Vortex P1</en>
+			<de>Feldwalze Pro</de>
+			<fr>Rouleau De Terrain Pro</fr>
+            <es>Rodillo de campo Pro</es>
+            <ru>Полевой каток Pro</ru>
+            <pl>Wałek polowy Pro</pl>
+            <it>Rullo Di Campo Pro</it>
+		</text>
+		<text name="name_vortexMulti">
+			<en>Vortex M1</en>
+			<de>Feldwalze Pro</de>
+			<fr>Rouleau De Terrain Pro</fr>
+            <es>Rodillo de campo Pro</es>
+            <ru>Полевой каток Pro</ru>
+            <pl>Wałek polowy Pro</pl>
+            <it>Rullo Di Campo Pro</it>
+		</text>
+		<text name="name_vortexShuttle">
+			<en>Vortex T1</en>
 			<de>Feldwalze Pro</de>
 			<fr>Rouleau De Terrain Pro</fr>
             <es>Rodillo de campo Pro</es>
