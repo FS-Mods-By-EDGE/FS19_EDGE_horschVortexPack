@@ -150,6 +150,7 @@
             <shaderParameter name="colorMat0" value="HORSCH_RED1"/>
             <shaderParameter name="colorMat1" value="SHARED_BLACK2"/>
         </material>
+    </baseMaterial>
     <baseMaterialConfigurations price="1500" useDefaultColors="true" defaultColorIndex="8">
             <!--Matte-->
 		<baseMaterialConfiguration name="$l10n_color_ITRUNNERMATTE" 	    color="0.038 0.037 0.048 1" material="1"/>
