@@ -154,7 +154,7 @@ o Contatta EDGEPureGaming su Facebook.]]></it>
         <storeItem xmlFilename="data/vortexShuttle.xml"/>
         <storeItem xmlFilename="data/vortexSeed.xml"/>
         <storeItem xmlFilename="data/vortexPlant.xml"/>
-        <storeItem xmlFilename="data/vortexMultiSeed.xml"/>
+        <storeItem xmlFilename="data/vortexMulti.xml"/>
     </storeItems>
 	<l10n filenamePrefix="modDesc/modDesc_l10n">
 		<text name="function_vortexPlant">

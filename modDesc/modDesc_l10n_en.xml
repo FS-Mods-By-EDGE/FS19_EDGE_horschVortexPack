@@ -4,13 +4,13 @@
 <translationby>Castiga</translationby>
 	<texts>
 		<text name="config_5050"				text="50 % Seed / 50 % Fertilizer"/>
-		<text name="config_6040"				text="Vortex Seed Shuttle"/>
-		<text name="config_7030"				text="Tank Size"/>
-		<text name="config_8020"				text="Vortex Seeders"/>
-		<text name="config_seed"				text="Vortex Seed Shuttle"/>
-		<text name="config_4060"				text="Tank Size"/>
-		<text name="config_3070"				text="Vortex Seed Shuttle"/>
-		<text name="config_2080"				text="Tank Size"/>
+		<text name="config_6040"				text="60 % Seed / 40 % Fertilizer"/>
+		<text name="config_7030"				text="70 % Seed / 30 % Fertilizer"/>
+		<text name="config_8020"				text="80 % Seed / 20 % Fertilizer"/>
+		<text name="config_seed"				text="100 % Seed"/>
+		<text name="config_4060"				text="40 % Seed / 60 % Fertilizer"/>
+		<text name="config_3070"				text="30 % Seed / 70 % Fertilizer"/>
+		<text name="config_2080"				text="20 % Seed / 80 % Fertilizer"/>
 		<text name="combo_vortex"				text="Vortex Seeders"/>
 		<text name="combo_vortexShuttle"		text="Vortex Seed Shuttle"/>
 		<text name="configuration_storage"		text="Tank Size"/>
